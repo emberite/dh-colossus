@@ -445,7 +445,7 @@ export class ColossusBoard extends HandlebarsApplicationMixin(ApplicationV2) {
     }
 
     static #onSheet(event, target) {
-        const token = target.dataset.id ? ColossusBoard.#seg.call(this, target) : this.fwToken;
+        const token = target.closest('.dhco-card') ? ColossusBoard.#seg.call(this, target) : this.fwToken;
         token?.actor?.sheet.render({ force: true });
     }
 

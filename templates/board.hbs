@@ -68,24 +68,22 @@
                         {{#if badges.length}}
                             <div class="dhco-badges">{{#each badges}}<span class="dhco-badge {{key}}" data-tooltip="{{tip}}"><i class="{{icon}}"></i>{{#if text}}<b>{{text}}</b>{{/if}}</span>{{/each}}</div>
                         {{/if}}
-                        {{#if riders.length}}
+                        <div class="dhco-card-foot">
                             <div class="dhco-riders">{{#each riders}}<img src="{{img}}" alt="{{name}}" data-tooltip="{{name}}" data-rider="{{uuid}}" class="{{#if mine}}mine{{/if}}">{{/each}}</div>
-                        {{/if}}
-                        {{#unless @root.editing}}{{#if canClimb}}<button type="button" data-action="climb" class="climb" data-tooltip="{{localize 'DHCO.Board.ClimbHint' n=climbDifficulty}}"><i class="fa-solid fa-person-hiking"></i> {{climbDifficulty}}</button>{{/if}}{{/unless}}
-                        {{#if broken}}{{#unless destroyed}}<div class="dhco-broken-tag"><i class="fa-solid fa-link-slash"></i> {{localize "DHCO.Board.Broken"}}{{#if brokenTokens}} ×{{brokenTokens}}{{/if}}</div>{{/unless}}{{/if}}
-                        {{#if destroyed}}<div class="dhco-destroyed-tag">{{localize "DHCO.Board.Destroyed"}}</div>{{/if}}
-                        <div class="dhco-card-tools">
+                            {{#unless @root.editing}}{{#if canClimb}}<button type="button" data-action="climb" class="climb" data-tooltip="{{localize 'DHCO.Board.ClimbHint' n=climbDifficulty}}"><i class="fa-solid fa-person-hiking"></i> {{climbDifficulty}}</button>{{/if}}{{/unless}}
                             {{#if @root.editing}}
-                                <a data-action="ground" data-tooltip="{{#if ground}}{{localize 'DHCO.Board.GroundOn'}}{{else}}{{localize 'DHCO.Board.GroundOff'}}{{/if}}"><i class="fa-solid {{#if ground}}fa-shoe-prints{{else}}fa-cloud{{/if}}"></i></a>
-                            {{else}}
-                                {{#if @root.gm}}
+                                <div class="dhco-card-tools"><a data-action="ground" data-tooltip="{{#if ground}}{{localize 'DHCO.Board.GroundOn'}}{{else}}{{localize 'DHCO.Board.GroundOff'}}{{/if}}"><i class="fa-solid {{#if ground}}fa-shoe-prints{{else}}fa-cloud{{/if}}"></i></a></div>
+                            {{else if @root.gm}}
+                                <div class="dhco-card-tools">
                                     {{#if attack}}<a data-action="attack" data-tooltip="{{attackName}}"><i class="fa-solid fa-hand-fist"></i></a>{{/if}}
                                     <a data-action="broken" data-delta="1" data-tooltip="{{localize 'DHCO.Board.AddBroken'}}"><i class="fa-solid fa-link-slash"></i></a>
                                     {{#if brokenTokens}}<a data-action="broken" data-delta="-1" data-tooltip="{{localize 'DHCO.Board.ClearBroken'}}"><i class="fa-solid fa-link"></i></a>{{/if}}
                                     <a data-action="sheet" data-tooltip="{{localize 'DHCO.Board.Sheet'}}"><i class="fa-solid fa-id-card"></i></a>
-                                {{/if}}
+                                </div>
                             {{/if}}
                         </div>
+                        {{#if broken}}{{#unless destroyed}}<div class="dhco-broken-tag"><i class="fa-solid fa-link-slash"></i> {{localize "DHCO.Board.Broken"}}{{#if brokenTokens}} ×{{brokenTokens}}{{/if}}</div>{{/unless}}{{/if}}
+                        {{#if destroyed}}<div class="dhco-destroyed-tag">{{localize "DHCO.Board.Destroyed"}}</div>{{/if}}
                         {{#if @root.editing}}<span class="dhco-resize"></span>{{/if}}
                     </div>
                 {{/each}}
