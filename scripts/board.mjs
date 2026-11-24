@@ -503,19 +503,29 @@ export class ColossusBoard extends HandlebarsApplicationMixin(ApplicationV2) {
 /**
  * A character climbs onto a segment or leaps to it from the one they're on: an action roll
  * (Agility or Strength) against the segment's Difficulty, adjusted by Climbing and Flying.
+ * Resolves to true if the character is now on the segment.
  */
 export async function climb(actor, fwToken, segId) {
     const model = colossusModel(fwToken);
     const seg = model.segments.find(s => s.id === segId);
-    if (!seg) return;
+    if (!seg) return false;
     const riding = ridingOn(actor);
     const fromId = riding?.fwToken === fwToken ? riding.segId : null;
     const from = model.segments.find(s => s.id === fromId) ?? null;
     const reach = canReach(from?.key ?? null, seg, { segments: model.segments, collapsed: model.collapsed });
-    if (!reach.ok) return ui.notifications.warn(L(`Board.Why.${reach.why}`));
-    if (reach.why === 'same') return setRider(fwToken, actor.uuid, seg.id, { quiet: true });
+    if (!reach.ok) {
+        ui.notifications.warn(L(`Board.Why.${reach.why}`));
+        return false;
+    }
+    if (reach.why === 'same') {
+        await setRider(fwToken, actor.uuid, seg.id, { quiet: true });
+        return true;
+    }
 
-    if (!setting('climbRolls')) return setRider(fwToken, actor.uuid, seg.id);
+    if (!setting('climbRolls')) {
+        await setRider(fwToken, actor.uuid, seg.id);
+        return true;
+    }
     let { difficulty } = climbDifficulty(seg, model.segments);
     if (model.flying && !from) difficulty += model.flying.bonus ?? 2;
     const verb = from ? L('Board.Leap') : L('Board.Climb');
@@ -528,14 +538,18 @@ export async function climb(actor, fwToken, segId) {
         ],
         rejectClose: false
     });
-    if (!trait) return;
+    if (!trait) return false;
     const result = await actor.rollTrait(trait, {
         title: `${verb}: ${model.short} — ${seg.label}`,
         roll: { type: 'trait', trait, difficulty }
     });
-    if (!result) return;
-    if (result.roll?.success) await setRider(fwToken, actor.uuid, seg.id);
-    else ui.notifications.info(L('Board.ClimbFailed', { name: actor.name, segment: seg.label }));
+    if (!result) return false;
+    if (result.roll?.success) {
+        await setRider(fwToken, actor.uuid, seg.id);
+        return true;
+    }
+    ui.notifications.info(L('Board.ClimbFailed', { name: actor.name, segment: seg.label }));
+    return false;
 }
 
 /* ------------------------------------------------------------------ */

@@ -112,7 +112,7 @@ Segment damage rules, Broken/Destroyed segments can't act, advantage while ridin
 const colossus = game.modules.get('dh-colossus').api;
 colossus.openBoard(token);            // a framework token, or the first colossus on the scene
 colossus.colossi();                   // every colossus on the scene, with its segments and riders
-colossus.climb(actor, frameworkToken, segmentTokenId);
+colossus.climb(actor, frameworkToken, segmentTokenId); // → true if they made it
 colossus.setRider(frameworkToken, actorUuid, segmentTokenId | null);
 colossus.setBroken(segmentToken, 2);
 colossus.setCollapsed(frameworkToken, { permanent: true });
