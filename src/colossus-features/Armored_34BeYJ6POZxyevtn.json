@@ -1,0 +1,38 @@
+{
+  "_id": "34BeYJ6POZxyevtn",
+  "name": "Armored",
+  "type": "feature",
+  "img": "icons/equipment/shield/heater-steel-worn.webp",
+  "system": {
+    "description": "<p>When this segment marks HP from an attack, it marks 1 fewer HP.</p>",
+    "featureForm": "passive",
+    "actions": {},
+    "resource": null,
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "gmNotes": "",
+    "granter": null,
+    "actorResources": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!34BeYJ6POZxyevtn"
+}

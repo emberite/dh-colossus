@@ -1,0 +1,421 @@
+{
+  "_id": "JVD3Fv9uqAkA2Kap",
+  "name": "Kelir Leg",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+  "system": {
+    "difficulty": 15,
+    "damageThresholds": {
+      "major": 30,
+      "severe": 65
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 3
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "dSEj4e5hiNrxhVBN": {
+        "name": "Contempt",
+        "value": 2,
+        "description": ""
+      },
+      "zU6ztA2HEAY60S4Q": {
+        "name": "Huge",
+        "value": 4,
+        "description": ""
+      },
+      "BpDHx4YGAFVYMul7": {
+        "name": "Sense Movement",
+        "value": 4,
+        "description": ""
+      }
+    },
+    "tier": 4,
+    "description": "<p>A crablike, mountainous beast whose children scurry in and around her, bringing food as tribute.</p>",
+    "attack": {
+      "name": "Stomp",
+      "range": "veryClose",
+      "roll": {
+        "bonus": 4,
+        "type": "attack",
+        "trait": null,
+        "difficulty": null,
+        "advState": "neutral",
+        "diceRolling": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "compare": null,
+          "treshold": null
+        },
+        "useDefault": false
+      },
+      "damage": {
+        "main": {
+          "value": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "multiplier": "flat",
+            "flatMultiplier": 4,
+            "dice": "d10",
+            "bonus": 6
+          },
+          "applyTo": "hitPoints",
+          "type": [
+            "physical"
+          ],
+          "base": false,
+          "resultBased": false,
+          "valueAlt": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "bonus": null,
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            }
+          },
+          "includeBase": false,
+          "direct": false,
+          "fullRestore": false,
+          "itemId": null
+        },
+        "resources": {}
+      },
+      "_id": "jZhVRdn0QAGdLfcf",
+      "systemPath": "attack",
+      "type": "attack",
+      "description": "",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "chatDisplay": false,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+        "value": null,
+        "max": null,
+        "recovery": null,
+        "consumeOnSuccess": false
+      },
+      "target": {
+        "type": "any",
+        "amount": 1
+      },
+      "effects": [],
+      "save": {
+        "trait": null,
+        "difficulty": null,
+        "damageMod": "none"
+      },
+      "baseAction": true,
+      "originItem": {
+        "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+    },
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Leg",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "1JpIGIUiupRCSfmH",
+      "name": "Climbing (−2)",
+      "type": "feature",
+      "img": "icons/sundries/misc/ladder.webp",
+      "system": {
+        "description": "<p>An action roll made to climb on the leg gains a −2 penalty to its Difficulty.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!JVD3Fv9uqAkA2Kap.1JpIGIUiupRCSfmH"
+    },
+    {
+      "_id": "fpSMyeHoZfROaRdC",
+      "name": "Destructive Scuttle",
+      "type": "feature",
+      "img": "icons/creatures/claws/pincer-crab-brown.webp",
+      "system": {
+        "description": "<p><strong>Mark a Stress</strong> to move up to Far range in any direction. All creatures in that path must make an Agility Reaction Roll. Targets who fail take <strong>4d10+6</strong> physical damage and must mark a Stress. Targets who succeed mark a Stress. Kelir can’t use this action if she is <em>Collapsed</em>.</p>",
+        "featureForm": "action",
+        "actions": {
+          "ygFCDs0C9ca662Of": {
+            "_id": "ygFCDs0C9ca662Of",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Destructive Scuttle",
+            "img": "icons/creatures/claws/pincer-crab-brown.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [
+              {
+                "scalable": false,
+                "key": "stress",
+                "value": 1,
+                "step": null,
+                "itemId": null,
+                "consumeOnSuccess": false
+              }
+            ],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": null
+            },
+            "effects": [],
+            "range": "far",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 4,
+                  "dice": "d10",
+                  "bonus": 6
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            },
+            "roll": {
+              "type": null,
+              "trait": null,
+              "difficulty": null,
+              "bonus": null,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": false
+            },
+            "save": {
+              "trait": "agility",
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {
+        "dh-colossus": {
+          "rule": {
+            "type": "notWhileCollapsed"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!JVD3Fv9uqAkA2Kap.fpSMyeHoZfROaRdC"
+    },
+    {
+      "_id": "3AFf0hxvwqOn7I7w",
+      "name": "Full Collapse",
+      "type": "feature",
+      "img": "icons/magic/earth/projectile-boulder-debris.webp",
+      "system": {
+        "description": "<p>Once three Legs are <em>Destroyed</em>, Kelir <em>Collapses</em> and PCs can climb on the Shell and Head from the ground.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!JVD3Fv9uqAkA2Kap.3AFf0hxvwqOn7I7w"
+    }
+  ],
+  "effects": [],
+  "folder": "9f7lcxR3fWSIZdya",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "leg",
+        "adjacent": [
+          "shell"
+        ],
+        "ground": true,
+        "attack": true,
+        "slots": [
+          {
+            "label": "Front Left Leg",
+            "x": 0,
+            "y": 2,
+            "w": 3,
+            "h": 2
+          },
+          {
+            "label": "Front Right Leg",
+            "x": 9,
+            "y": 2,
+            "w": 3,
+            "h": 2
+          },
+          {
+            "label": "Rear Left Leg",
+            "x": 0,
+            "y": 4,
+            "w": 3,
+            "h": 2
+          },
+          {
+            "label": "Rear Right Leg",
+            "x": 9,
+            "y": 4,
+            "w": 3,
+            "h": 2
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!JVD3Fv9uqAkA2Kap"
+}

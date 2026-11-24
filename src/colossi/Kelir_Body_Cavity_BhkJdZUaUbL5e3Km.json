@@ -1,0 +1,399 @@
+{
+  "_id": "BhkJdZUaUbL5e3Km",
+  "name": "Kelir Body Cavity",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+  "system": {
+    "difficulty": 17,
+    "damageThresholds": {
+      "major": 30,
+      "severe": 65
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 6
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "dSEj4e5hiNrxhVBN": {
+        "name": "Contempt",
+        "value": 2,
+        "description": ""
+      },
+      "zU6ztA2HEAY60S4Q": {
+        "name": "Huge",
+        "value": 4,
+        "description": ""
+      },
+      "BpDHx4YGAFVYMul7": {
+        "name": "Sense Movement",
+        "value": 4,
+        "description": ""
+      }
+    },
+    "tier": 4,
+    "description": "<p>A crablike, mountainous beast whose children scurry in and around her, bringing food as tribute.</p>",
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Body Cavity",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "1ccZpAKTt3bsDYmK",
+      "name": "Fatal",
+      "type": "feature",
+      "img": "icons/magic/death/projectile-skull-fire-orange-red.webp",
+      "system": {
+        "description": "<p>If this segment is <em>Destroyed</em>, Kelir is defeated.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!BhkJdZUaUbL5e3Km.1ccZpAKTt3bsDYmK"
+    },
+    {
+      "_id": "GIPbNM8NKZNX0lV2",
+      "name": "Hateful Heart",
+      "type": "feature",
+      "img": "icons/commodities/biological/organ-heart-red.webp",
+      "system": {
+        "description": "<p>Kelir’s heart is suspended within the body cavity, connected by thick veins and arteries. The Body Cavity is immune to damage unless her heart is the target of a successful attack. The heart can only be attacked from Far or greater range, or a PC must succeed on an Agility Roll while inside the Body Cavity to reach the heart to make an attack against it within Melee range.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!BhkJdZUaUbL5e3Km.GIPbNM8NKZNX0lV2"
+    },
+    {
+      "_id": "3uWlhw3cFuijMhbt",
+      "name": "Grab and Rend",
+      "type": "feature",
+      "img": "icons/creatures/claws/pincer-crab-red.webp",
+      "system": {
+        "description": "<p>Make an attack using Kelir’s “Brood Attack” action against a target in the Body Cavity. On a success, <strong>spend a Fear</strong> to deal double damage and <em>Restrain</em> the target until they’re freed with a successful Strength Roll.</p>",
+        "featureForm": "action",
+        "actions": {
+          "atKeKMgfgd4EqtJq": {
+            "_id": "atKeKMgfgd4EqtJq",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Grab and Rend",
+            "img": "icons/creatures/claws/pincer-crab-red.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [
+              {
+                "scalable": false,
+                "key": "fear",
+                "value": 1,
+                "step": null,
+                "itemId": null,
+                "consumeOnSuccess": false
+              }
+            ],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": 1
+            },
+            "effects": [
+              {
+                "_id": "DcJK11A98VIrxSxe",
+                "onSave": false
+              }
+            ],
+            "range": "melee",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 8,
+                  "dice": "d8",
+                  "bonus": null
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            },
+            "roll": {
+              "type": "attack",
+              "trait": null,
+              "difficulty": null,
+              "bonus": 6,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": false
+            },
+            "save": {
+              "trait": null,
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [
+        {
+          "_id": "DcJK11A98VIrxSxe",
+          "name": "Rent",
+          "img": "icons/creatures/claws/pincer-crab-red.webp",
+          "type": "base",
+          "transfer": false,
+          "disabled": false,
+          "statuses": [
+            "restrained"
+          ],
+          "description": "",
+          "tint": "#ffffff",
+          "showIcon": 1,
+          "sort": 0,
+          "flags": {},
+          "system": {
+            "changes": [],
+            "duration": {
+              "description": ""
+            },
+            "rangeDependence": null,
+            "stacking": null,
+            "targetDispositions": [],
+            "conditionals": []
+          },
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "folder": null,
+          "_stats": {
+            "coreVersion": "14.370",
+            "systemId": "daggerheart",
+            "systemVersion": "2.13.2",
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null,
+            "compendiumSource": null,
+            "duplicateSource": null
+          },
+          "_key": "!actors.items.effects!BhkJdZUaUbL5e3Km.3uWlhw3cFuijMhbt.DcJK11A98VIrxSxe"
+        }
+      ],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!BhkJdZUaUbL5e3Km.3uWlhw3cFuijMhbt"
+    },
+    {
+      "_id": "Ft5MiN1r4UUyhpRH",
+      "name": "Protective Swarm",
+      "type": "feature",
+      "img": "icons/creatures/invertebrates/bug-sixlegged-gray.webp",
+      "system": {
+        "description": "<p>Kelir’s Body Cavity is filled with her children, who protect her heart. A PC who makes an action roll in the Body Cavity must mark a Stress as they fight off Kelir’s children and their shearing pincers.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {
+        "dh-colossus": {
+          "rule": {
+            "type": "riderStress",
+            "stress": 1
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!BhkJdZUaUbL5e3Km.Ft5MiN1r4UUyhpRH"
+    }
+  ],
+  "effects": [],
+  "folder": "9f7lcxR3fWSIZdya",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "body-cavity",
+        "adjacent": [
+          "shell"
+        ],
+        "ground": false,
+        "attack": false,
+        "slots": [
+          {
+            "label": "Body Cavity",
+            "x": 4,
+            "y": 5,
+            "w": 4,
+            "h": 2
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!BhkJdZUaUbL5e3Km"
+}

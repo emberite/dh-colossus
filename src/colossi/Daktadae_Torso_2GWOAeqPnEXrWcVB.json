@@ -1,0 +1,253 @@
+{
+  "_id": "2GWOAeqPnEXrWcVB",
+  "name": "Daktadae Torso",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-305-colossus-daktade.webp",
+  "system": {
+    "difficulty": 14,
+    "damageThresholds": {
+      "major": 16,
+      "severe": 25
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 6
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "0dgi0AQRvWc0YBtY": {
+        "name": "Huge",
+        "value": 2,
+        "description": ""
+      },
+      "Vm4HF62hmASWUaQn": {
+        "name": "Trampling",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 2,
+    "description": "<p>A massive steel rhinoceros formed from a steam train, a cleaver emerging from his head instead of a horn.</p>",
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Torso",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-305-colossus-daktade.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "uGv7ZrO8CkIWSgHN",
+      "name": "Fatal",
+      "type": "feature",
+      "img": "icons/magic/death/projectile-skull-fire-orange-red.webp",
+      "system": {
+        "description": "<p>When this segment is <em>Destroyed</em>, the colossus is defeated.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!2GWOAeqPnEXrWcVB.uGv7ZrO8CkIWSgHN"
+    },
+    {
+      "_id": "264TDvBnus0Tsbpe",
+      "name": "Climbing (+3)",
+      "type": "feature",
+      "img": "icons/sundries/misc/ladder.webp",
+      "system": {
+        "description": "<p>The Torso’s Difficulty gains a +3 bonus against action rolls made to climb it unless the Head is <em>Broken</em>.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!2GWOAeqPnEXrWcVB.264TDvBnus0Tsbpe"
+    },
+    {
+      "_id": "mwnGhFI9AYRjrQ4w",
+      "name": "Protected",
+      "type": "feature",
+      "img": "icons/magic/defensive/armor-stone-skin.webp",
+      "system": {
+        "description": "<p>The Torso is covered with external rib plates of unbreakable minerals. This segment can’t be damaged unless the Head is currently <em>Broken</em> or <em>Destroyed</em>.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!2GWOAeqPnEXrWcVB.mwnGhFI9AYRjrQ4w"
+    },
+    {
+      "_id": "fpHJxXk4qejk5S49",
+      "name": "Weak Point",
+      "type": "feature",
+      "img": "icons/skills/targeting/target-glowing-yellow.webp",
+      "system": {
+        "description": "<p>The underbelly of the Torso has a weak point. When this segment marks HP from an attack within Melee range while the Head is <em>Broken</em> or <em>Destroyed</em>, it must mark an additional HP.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!2GWOAeqPnEXrWcVB.fpHJxXk4qejk5S49"
+    }
+  ],
+  "effects": [],
+  "folder": "JmNjR4tc65ycEiWs",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "torso",
+        "adjacent": [
+          "head",
+          "foreleg",
+          "hindleg"
+        ],
+        "ground": false,
+        "attack": false,
+        "slots": [
+          {
+            "label": "Torso",
+            "x": 3,
+            "y": 1,
+            "w": 6,
+            "h": 4
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!2GWOAeqPnEXrWcVB"
+}

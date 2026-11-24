@@ -1,0 +1,254 @@
+{
+  "_id": "EmEdgXeZ9WCofiEJ",
+  "name": "Ikeri Torso",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-301-colossus-ikeri.webp",
+  "system": {
+    "difficulty": 14,
+    "damageThresholds": {
+      "major": 11,
+      "severe": 22
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 8
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "Z70CqgboVUYsyaJw": {
+        "name": "Eagle Eyes",
+        "value": 3,
+        "description": ""
+      },
+      "rQjODEsHBXgVzjCr": {
+        "name": "Huge",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 1,
+    "description": "<p>This apelike creature has the face of a bird. They are made of stone and carry an enormous mesa upon their back.</p>",
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Torso",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-301-colossus-ikeri.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "g1aFhO2czrDZbzcX",
+      "name": "Fatal",
+      "type": "feature",
+      "img": "icons/magic/death/projectile-skull-fire-orange-red.webp",
+      "system": {
+        "description": "<p>When the Torso is <em>Destroyed</em>, the colossus is defeated.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!EmEdgXeZ9WCofiEJ.g1aFhO2czrDZbzcX"
+    },
+    {
+      "_id": "seLCfB2eiiVBmQkZ",
+      "name": "Shake Off",
+      "type": "feature",
+      "img": "icons/magic/earth/barrier-stone-explosion-red.webp",
+      "system": {
+        "description": "<p><strong>Spend a Fear</strong> to throw off foes. All creatures on Ikeri must make a Strength Reaction Roll. Targets who fail fall to the ground and must mark a HP. Targets who succeed must mark a Stress.</p>",
+        "featureForm": "action",
+        "actions": {
+          "DizWigIEeaOtGOkN": {
+            "_id": "DizWigIEeaOtGOkN",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Shake Off",
+            "img": "icons/magic/earth/barrier-stone-explosion-red.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [
+              {
+                "scalable": false,
+                "key": "fear",
+                "value": 1,
+                "step": null,
+                "itemId": null,
+                "consumeOnSuccess": false
+              }
+            ],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": null
+            },
+            "effects": [],
+            "range": "",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "roll": {
+              "type": null,
+              "trait": null,
+              "difficulty": null,
+              "bonus": null,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": false
+            },
+            "save": {
+              "trait": "strength",
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {
+        "dh-colossus": {
+          "shakeOff": true
+        }
+      },
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!EmEdgXeZ9WCofiEJ.seLCfB2eiiVBmQkZ"
+    }
+  ],
+  "effects": [],
+  "folder": "hxZcOOZuv6mu8iiL",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "torso",
+        "adjacent": [
+          "head",
+          "arm",
+          "leg"
+        ],
+        "ground": true,
+        "attack": false,
+        "slots": [
+          {
+            "label": "Torso",
+            "x": 4,
+            "y": 2,
+            "w": 5,
+            "h": 3
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!EmEdgXeZ9WCofiEJ"
+}

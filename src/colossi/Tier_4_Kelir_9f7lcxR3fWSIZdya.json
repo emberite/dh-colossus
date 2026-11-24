@@ -1,0 +1,22 @@
+{
+  "_id": "9f7lcxR3fWSIZdya",
+  "name": "Tier 4: Kelir",
+  "type": "Actor",
+  "sorting": "m",
+  "sort": 400000,
+  "color": "#4b402e",
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!folders!9f7lcxR3fWSIZdya"
+}

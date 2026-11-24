@@ -1,0 +1,346 @@
+{
+  "_id": "YQNR8U2wJ4Td5H3Z",
+  "name": "Poy, Sky Skimmer of the Dust Sea",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-307-colossus-poy.webp",
+  "system": {
+    "difficulty": 16,
+    "damageThresholds": {
+      "major": 25,
+      "severe": 48
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 0
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "Corral, intimidate, maintain distance",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "framework",
+      "parts": [
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.Z19aJFn2DGVqVw1M",
+          "originalUuid": null,
+          "quantity": 1
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.P524AMZdYFwO7OMk",
+          "originalUuid": null,
+          "quantity": 1
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.hiIJzvlPBt2GF7Qi",
+          "originalUuid": null,
+          "quantity": 1
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.XJlVdSc9nmmIrtDo",
+          "originalUuid": null,
+          "quantity": 2
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.ibyRp0cmVKJTVcD6",
+          "originalUuid": null,
+          "quantity": 2
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.Ev4weTf0pDaobaAa",
+          "originalUuid": null,
+          "quantity": 1
+        }
+      ],
+      "frameworkUuid": null
+    },
+    "notes": "<p><strong>Size:</strong> 220 ft. long, 160 ft. wingspan. <strong>Segments:</strong> 1 Head, 1 Neck, 1 Body, 2 Talon, 2 Wing, 1 Tail.</p><p>The framework’s Difficulty is the highest Difficulty among the segments, for effects that target Poy as a whole.</p>",
+    "experiences": {
+      "gb3lwIU3iWABzdDy": {
+        "name": "Attack From Above",
+        "value": 3,
+        "description": ""
+      },
+      "J8PFsluxOK26sE4R": {
+        "name": "Huge",
+        "value": 3,
+        "description": ""
+      },
+      "0A2jycX43x4nXgFc": {
+        "name": "Maneuver",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 3,
+    "description": "<p>This massive shoebill stork is formed from the dust of the Drylands and traps enemies in their cavernous beak.</p>",
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "gargantuan",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Poy",
+    "displayName": 20,
+    "displayBars": 0,
+    "actorLink": false,
+    "width": 4,
+    "height": 4,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-307-colossus-poy.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "gb2lJ6ZPrhF4UXOR",
+      "name": "Flying",
+      "type": "feature",
+      "img": "icons/commodities/biological/wing-bird-white.webp",
+      "system": {
+        "description": "<p>Poy can fly unless one of their Wings is <em>Destroyed</em>. While Poy is flying, each segment’s Difficulty gains a +2 bonus against action rolls made by PCs who aren’t on Poy.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {
+        "dh-colossus": {
+          "rule": {
+            "type": "flying",
+            "bonus": 2,
+            "groundedBy": "wing"
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!YQNR8U2wJ4Td5H3Z.gb2lJ6ZPrhF4UXOR"
+    },
+    {
+      "_id": "z3uUA6cTJYlsJ7VC",
+      "name": "Strong Winds",
+      "type": "feature",
+      "img": "icons/magic/air/wind-tornado-wall-blue.webp",
+      "system": {
+        "description": "<p>While Poy is flying, no other flying creature can come within Close range of Poy without being blown backward by their powerful wings.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!YQNR8U2wJ4Td5H3Z.z3uUA6cTJYlsJ7VC"
+    },
+    {
+      "_id": "p7CcK3EzTBAgtYa9",
+      "name": "Fall Off",
+      "type": "feature",
+      "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+      "system": {
+        "description": "<p>When a PC falls off Poy while the colossus is flying, they take <strong>3d20+6</strong> physical damage if they hit the ground.</p>",
+        "featureForm": "reaction",
+        "actions": {
+          "mbeQXCCAL6AyTeWN": {
+            "_id": "mbeQXCCAL6AyTeWN",
+            "type": "damage",
+            "systemPath": "actions",
+            "name": "Fall Off",
+            "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "reaction",
+            "cost": [],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": null
+            },
+            "effects": [],
+            "range": "",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 3,
+                  "dice": "d20",
+                  "bonus": 6
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {
+        "dh-colossus": {
+          "rule": {
+            "type": "fallDamage",
+            "damage": "3d20+6",
+            "whileFlying": true
+          }
+        }
+      },
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!YQNR8U2wJ4Td5H3Z.p7CcK3EzTBAgtYa9"
+    },
+    {
+      "_id": "eKAbWZLybh9OVwZw",
+      "name": "Colossal Power",
+      "type": "feature",
+      "img": "icons/magic/control/fear-fright-monster-grin-red-orange.webp",
+      "system": {
+        "description": "<p>When Poy fails an attack, you gain a Fear.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!YQNR8U2wJ4Td5H3Z.eKAbWZLybh9OVwZw"
+    }
+  ],
+  "effects": [],
+  "folder": "1esMEK5Eeazd3Ii7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "colossus": {
+        "key": "poy",
+        "size": "220 ft. long, 160 ft. wingspan"
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!YQNR8U2wJ4Td5H3Z"
+}

@@ -1,0 +1,402 @@
+{
+  "_id": "iSQB8TpkwRe7uwIU",
+  "name": "Daktadae Foreleg",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-305-colossus-daktade.webp",
+  "system": {
+    "difficulty": 14,
+    "damageThresholds": {
+      "major": 16,
+      "severe": 25
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 3
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "0dgi0AQRvWc0YBtY": {
+        "name": "Huge",
+        "value": 2,
+        "description": ""
+      },
+      "Vm4HF62hmASWUaQn": {
+        "name": "Trampling",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 2,
+    "description": "<p>A massive steel rhinoceros formed from a steam train, a cleaver emerging from his head instead of a horn.</p>",
+    "attack": {
+      "name": "Stomp",
+      "range": "veryClose",
+      "roll": {
+        "bonus": 1,
+        "type": "attack",
+        "trait": null,
+        "difficulty": null,
+        "advState": "neutral",
+        "diceRolling": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "compare": null,
+          "treshold": null
+        },
+        "useDefault": false
+      },
+      "damage": {
+        "main": {
+          "value": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "multiplier": "flat",
+            "flatMultiplier": 2,
+            "dice": "d10",
+            "bonus": 8
+          },
+          "applyTo": "hitPoints",
+          "type": [
+            "physical"
+          ],
+          "base": false,
+          "resultBased": false,
+          "valueAlt": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "bonus": null,
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            }
+          },
+          "includeBase": false,
+          "direct": false,
+          "fullRestore": false,
+          "itemId": null
+        },
+        "resources": {}
+      },
+      "_id": "dBEQsYWGOiOT4Fih",
+      "systemPath": "attack",
+      "type": "attack",
+      "description": "",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "chatDisplay": false,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+        "value": null,
+        "max": null,
+        "recovery": null,
+        "consumeOnSuccess": false
+      },
+      "target": {
+        "type": "any",
+        "amount": 1
+      },
+      "effects": [],
+      "save": {
+        "trait": null,
+        "difficulty": null,
+        "damageMod": "none"
+      },
+      "baseAction": true,
+      "originItem": {
+        "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+    },
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Foreleg",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-305-colossus-daktade.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "VZrWhkIbqE37UWKP",
+      "name": "Massive Hoof",
+      "type": "feature",
+      "img": "icons/creatures/abilities/paw-print-tan.webp",
+      "system": {
+        "description": "<p>This segment’s standard attack is made with advantage and can target a group.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!iSQB8TpkwRe7uwIU.VZrWhkIbqE37UWKP"
+    },
+    {
+      "_id": "ryb9sGS7fBHb3Y4K",
+      "name": "Shake the Earth",
+      "type": "feature",
+      "img": "icons/magic/earth/strike-fist-stone-light.webp",
+      "system": {
+        "description": "<p>Daktadae rears up on their hind legs and slams down, creating a shockwave that knocks back all PCs within Very Close range that aren’t on Daktadae back to Close range and <em>Rattles</em> them until their next roll with Hope. While Rattled, the PC has disadvantage on reaction rolls.</p>",
+        "featureForm": "action",
+        "actions": {
+          "QnSuKfCcnVMzDUYk": {
+            "_id": "QnSuKfCcnVMzDUYk",
+            "type": "effect",
+            "systemPath": "actions",
+            "name": "Shake the Earth",
+            "img": "icons/magic/earth/strike-fist-stone-light.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": null
+            },
+            "effects": [
+              {
+                "_id": "NZt4s858WAdli2ZC",
+                "onSave": false
+              }
+            ],
+            "range": "veryClose",
+            "areas": [
+              {
+                "name": "Shake the Earth",
+                "type": "placed",
+                "shape": "emanation",
+                "size": "veryClose",
+                "hasHole": false,
+                "effects": []
+              }
+            ],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": []
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [
+        {
+          "_id": "NZt4s858WAdli2ZC",
+          "name": "Rattled",
+          "img": "icons/magic/earth/strike-fist-stone-light.webp",
+          "type": "base",
+          "transfer": false,
+          "disabled": false,
+          "statuses": [
+            "dhcoRattled"
+          ],
+          "description": "",
+          "tint": "#ffffff",
+          "showIcon": 1,
+          "sort": 0,
+          "flags": {},
+          "system": {
+            "changes": [],
+            "duration": {
+              "description": ""
+            },
+            "rangeDependence": null,
+            "stacking": null,
+            "targetDispositions": [],
+            "conditionals": []
+          },
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "folder": null,
+          "_stats": {
+            "coreVersion": "14.370",
+            "systemId": "daggerheart",
+            "systemVersion": "2.13.2",
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null,
+            "compendiumSource": null,
+            "duplicateSource": null
+          },
+          "_key": "!actors.items.effects!iSQB8TpkwRe7uwIU.ryb9sGS7fBHb3Y4K.NZt4s858WAdli2ZC"
+        }
+      ],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!iSQB8TpkwRe7uwIU.ryb9sGS7fBHb3Y4K"
+    },
+    {
+      "_id": "QekIRjYAhF4STi8N",
+      "name": "Collapse",
+      "type": "feature",
+      "img": "icons/magic/earth/projectile-boulder-debris.webp",
+      "system": {
+        "description": "<p>If one Foreleg is <em>Destroyed</em>, place a token on this segment. Until it is cleared, Daktadae is <em>Collapsed</em>, allowing PCs to climb directly onto the Torso and Head. If both Forelegs are Destroyed, Daktadae is Collapsed permanently.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!iSQB8TpkwRe7uwIU.QekIRjYAhF4STi8N"
+    }
+  ],
+  "effects": [],
+  "folder": "JmNjR4tc65ycEiWs",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "foreleg",
+        "adjacent": [
+          "torso",
+          "foreleg"
+        ],
+        "ground": true,
+        "attack": true,
+        "slots": [
+          {
+            "label": "Left Foreleg",
+            "x": 3,
+            "y": 5,
+            "w": 2,
+            "h": 3
+          },
+          {
+            "label": "Right Foreleg",
+            "x": 5,
+            "y": 5,
+            "w": 2,
+            "h": 3
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!iSQB8TpkwRe7uwIU"
+}

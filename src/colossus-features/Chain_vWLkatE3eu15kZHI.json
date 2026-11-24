@@ -1,0 +1,38 @@
+{
+  "_id": "vWLkatE3eu15kZHI",
+  "name": "Chain",
+  "type": "feature",
+  "img": "icons/tools/fasteners/chain-steel-blue.webp",
+  "system": {
+    "description": "<p>When all segments in this chain are <em>Destroyed</em>, the colossus is defeated.</p><p><em>This feature might appear as Chain (A) or Chain (B) for clarity across multiple segment chains. Rename it “Chain (B)” for a second chain.</em></p>",
+    "featureForm": "passive",
+    "actions": {},
+    "resource": null,
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "gmNotes": "",
+    "granter": null,
+    "actorResources": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!vWLkatE3eu15kZHI"
+}

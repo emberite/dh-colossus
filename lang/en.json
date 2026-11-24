@@ -1,0 +1,353 @@
+{
+    "DHCO": {
+        "Menu": {
+            "Legend": "Colossus of the Drylands",
+            "Board": "Colossus Board",
+            "Drylands": "Emergence of Kudamat",
+            "Colossi": "Colossi"
+        },
+        "Card": {
+            "Alias": "The Drylands",
+            "Broken": {
+                "Title": "{segment} is Broken",
+                "Body": "{colossus}’s {segment} is <em>Broken</em> ({n} token(s)) and can’t use actions or reactions until all tokens are cleared."
+            },
+            "Repaired": {
+                "Title": "{segment} recovers",
+                "Body": "The last token is cleared: the {segment} is no longer <em>Broken</em>."
+            },
+            "Destroyed": {
+                "Title": "{segment} Destroyed",
+                "Body": "{colossus}’s {segment} marks its last Hit Point and is <em>Destroyed</em>. It can’t use any of its features, but it’s still there: PCs can climb on and across it."
+            },
+            "Cascade": {
+                "Title": "Cascade",
+                "Body": "The {from} is Destroyed: the {to} marks {n} HP."
+            },
+            "Collapsed": {
+                "Title": "{colossus} Collapses",
+                "Body": "{colossus} is <em>Collapsed</em>: segments that aren’t accessible from the ground can now be climbed.",
+                "Permanent": "{colossus} is <em>Collapsed</em> for good: every segment can be climbed from the ground."
+            },
+            "Risen": {
+                "Title": "{colossus} rises again",
+                "Body": "{colossus} is no longer Collapsed. Segments high above the ground are out of reach again."
+            },
+            "Rider": {
+                "Climb": "<strong>{name}</strong> climbs onto {colossus}’s <strong>{to}</strong>.",
+                "Leap": "<strong>{name}</strong> leaps from the {from} to the <strong>{to}</strong>.",
+                "Down": "<strong>{name}</strong> climbs down from {colossus}.",
+                "Fall": "<strong>{name}</strong> falls off {colossus}!",
+                "Thrown": "<strong>{name}</strong> is thrown off {colossus} onto the ground!",
+                "FallDamage": "{colossus} is flying: a PC who hits the ground takes {damage} physical damage."
+            },
+            "ShakeOff": {
+                "Title": "{colossus} shakes off foes",
+                "Body": "Targets who fail their Strength Reaction Roll fall to the ground and mark a HP. Click who falls:",
+                "Falls": "{name} falls"
+            },
+            "Defeated": {
+                "Title": "{colossus} is defeated!",
+                "Fatal": "Its fatal segment, the {segment}, is Destroyed.",
+                "Chain": "Every segment in Chain {chain} is Destroyed.",
+                "All": "Every segment is Destroyed.",
+                "GM": "The colossus falls.",
+                "Shard": "The soul shard {colossus} guarded shatters deep beneath the earth, and a ring of essentia erupts from the ground a mile around it.",
+                "Body": "The colossus falls.",
+                "Shatter": "Shatter the soul shard"
+            },
+            "Swarm": "{name} acts inside the {segment} and marks {n} Stress fighting off Kelir’s children."
+        },
+        "Damage": {
+            "Title": "{segment} of {colossus}",
+            "Summary": "Colossus rules changed the HP marked from <strong>{from}</strong> to <strong>{to}</strong>:",
+            "NoHp": "The {segment} has no Hit Points and takes no damage.",
+            "Invulnerable": "Invulnerable: the {segment} takes no damage now.",
+            "Protected": "Protected: the {segment} can’t be damaged now.",
+            "Strike": "Strike: the {segment} is immune to damage from attacks not made within {range} range.",
+            "Armored": "Armored: the {segment} marks 1 fewer HP.",
+            "WeakPoint": "Weak Point: the {segment} marks an additional HP."
+        },
+        "Range": {
+            "melee": "Melee",
+            "veryClose": "Very Close",
+            "close": "Close",
+            "far": "Far",
+            "veryFar": "Very Far"
+        },
+        "Form": {
+            "passive": "Passive",
+            "action": "Action",
+            "reaction": "Reaction"
+        },
+        "Rule": {
+            "fatal": "Fatal: when it’s Destroyed, the colossus is defeated",
+            "chain": "Chain: when every segment of the chain is Destroyed, the colossus is defeated",
+            "strike": "Strike: immune to damage from attacks not made within this range",
+            "armored": "Armored: marks 1 fewer HP from an attack",
+            "weakPoint": "Weak Point: marks an additional HP from attacks within Melee range",
+            "invulnerable": "Invulnerable: takes no damage (or only while Broken)",
+            "protected": "Protected: can’t be damaged until its condition is met",
+            "climbing": "Climbing: changes the Difficulty to climb it",
+            "notClimbable": "Not Climbable: can’t be climbed",
+            "cascade": "Cascade: when it’s Destroyed, another segment marks HP",
+            "collapse": "Collapse: the colossus Collapses when its trigger is met",
+            "flying": "Flying",
+            "fallDamage": "Fall damage",
+            "riderStress": "Action rolls on this segment cost a Stress",
+            "notWhileCollapsed": "Can’t be used while Collapsed"
+        },
+        "Condition": {
+            "dhcoBroken": {
+                "Name": "Broken",
+                "Short": "This segment can’t use actions or reactions until the condition is cleared."
+            },
+            "dhcoDestroyed": {
+                "Name": "Destroyed",
+                "Short": "This segment marked its last Hit Point and can’t use any of its features."
+            },
+            "dhcoCollapsed": {
+                "Name": "Collapsed",
+                "Short": "The colossus has collapsed: segments that aren’t accessible from the ground can be climbed."
+            },
+            "dhcoShaken": {
+                "Name": "Shaken",
+                "Short": "You don’t gain Hope on a result with Hope; instead, clear the Shaken condition.",
+                "Blocked": "{name} is Shaken: no Hope from this roll, and Shaken is cleared."
+            },
+            "dhcoRattled": {
+                "Name": "Rattled",
+                "Short": "You have disadvantage on reaction rolls until your next roll with Hope."
+            },
+            "dhcoTrapped": {
+                "Name": "Trapped",
+                "Short": "Trapped inside the colossus until the segment holding you takes Major or greater damage."
+            }
+        },
+        "Notify": {
+            "NoGM": "A GM needs to be connected to change the colossus.",
+            "NoCore": "The Daggerheart Core Rulebook module isn’t active.",
+            "NoCoreModule": "Colossus: the Daggerheart Core Rulebook module (daggerheart-core) isn’t active. The colossi’s art and the rulebook links come from it.",
+            "Destroyed": "The {segment} is Destroyed and can’t use any of its features.",
+            "Broken": "The {segment} is Broken and can’t use actions or reactions until all its tokens are cleared.",
+            "Collapsed": "{colossus} is Collapsed and can’t use {feature}.",
+            "RiderImmune": "The {segment}’s standard attack can’t be used on a PC riding it ({names}). Use another segment.",
+            "RiderAdvantage": "{name} is on that segment: advantage on the attack.",
+            "NoCharacter": "Select your character’s token (or set your character) to climb.",
+            "NotOnScene": "Place the colossus on the scene to open its board.",
+            "NoBaseActor": "This segment’s actor isn’t in the world, so its layout can’t be saved. Import the colossus first."
+        },
+        "Board": {
+            "Title": "Colossus Board",
+            "Open": "Colossus Board",
+            "EmptyTitle": "No colossus here",
+            "EmptyBody": "Drag a colossus framework from the Colossi compendium onto the scene: its segments are placed with it and appear here.",
+            "Tier": "Tier {tier}",
+            "Thresholds": "Damage thresholds (Major / Severe), shared by every segment",
+            "Stress": "Stress, shared by every segment",
+            "Defeated": "Defeated",
+            "Flying": "Flying",
+            "Collapsed": "Collapsed",
+            "Permanently": "permanently",
+            "Tokens": "{n} token(s)",
+            "ClearToken": "Clear a token",
+            "Collapse": "Collapse",
+            "Rise": "Rise",
+            "Edit": "Edit layout",
+            "Done": "Done",
+            "EditHint": "Drag cards to move them, drag the corner to resize, double-click a name to rename, click two cards to link or unlink them",
+            "Editing": "Drag cards to move, drag a corner to resize, double-click a name to rename. Click one card, then another, to link or unlink them as adjacent.",
+            "Arrange": "Arrange tokens",
+            "ArrangeHint": "Place the segment tokens on the canvas in the shape of the board, around the framework token",
+            "Defeat": "Defeat",
+            "Undefeat": "Undo defeat",
+            "DefeatConfirm": "Mark {colossus} as defeated?",
+            "Rules": "Rules",
+            "MissingParts": "{n} segment(s) aren’t on the scene.",
+            "PlaceParts": "Place segments",
+            "Difficulty": "Difficulty",
+            "ClimbDifficulty": "climb {n}",
+            "HP": "Hit Points",
+            "NoHp": "HP: None",
+            "Broken": "Broken",
+            "Destroyed": "Destroyed",
+            "GroundOn": "Can be climbed from the ground (click to change)",
+            "GroundOff": "Out of reach from the ground until the colossus is Collapsed (click to change)",
+            "ClimbHint": "Climb or leap here: Agility or Strength Roll, Difficulty {n}",
+            "AddBroken": "Place a Broken token",
+            "ClearBroken": "Clear a Broken token",
+            "Sheet": "Open the sheet",
+            "NoSegments": "This colossus has no segments on the scene.",
+            "Ground": "On the ground",
+            "NobodyOnGround": "Nobody",
+            "On": "on the {segment}",
+            "OnGround": "on the ground",
+            "ClimbDownHint": "Climb down",
+            "MeHint": "Climb onto a segment from the ground, or leap to a segment adjacent to the one you’re on. While on a segment you have advantage on attacks against it, and its standard attack can’t be used on you.",
+            "NoCharacter": "Select your character’s token to climb the colossus.",
+            "GMHint": "Click a card to select its token, right-click to target it. Drag a portrait to move a PC without a roll.",
+            "Features": "The whole colossus",
+            "Legend": "Segment rules",
+            "Rename": "Rename segment",
+            "Save": "Save",
+            "Linked": "{a} and {b} are now adjacent.",
+            "Unlinked": "{a} and {b} are no longer adjacent.",
+            "Climb": "Climb",
+            "Leap": "Leap",
+            "ClimbPrompt": "Climb onto {colossus}’s <strong>{to}</strong>: make an action roll against Difficulty <strong>{difficulty}</strong>.",
+            "LeapPrompt": "Leap from the {from} to the <strong>{to}</strong>: make an action roll against Difficulty <strong>{difficulty}</strong>.",
+            "ClimbFailed": "{name} doesn’t make it onto the {segment}.",
+            "Why": {
+                "notClimbable": "This segment can’t be climbed.",
+                "notFromGround": "This segment is out of reach from the ground until the colossus is Collapsed.",
+                "notAdjacent": "You can only leap to a segment adjacent to the one you’re on.",
+                "same": "You’re already there."
+            }
+        },
+        "Drylands": {
+            "Title": "Emergence of Kudamat",
+            "Heading": "Emergence of Kudamat",
+            "Sub": "Kudamat siphons power from his soul shards while the party rests. Every colossus slain shatters one.",
+            "Kudamat": "Kudamat",
+            "KudamatDescription": "The god in Godfell Mountain, emerged with a Power of {power}.",
+            "Phase": {
+                "hunt": "Hunt",
+                "interlude": "Interlude"
+            },
+            "PhaseBody": {
+                "hunt": "A colossus has risen. Rests taken now mark the Siphoning Track.",
+                "interlude": "Time for smaller, personal tasks across the Drylands. Rests don’t mark the track."
+            },
+            "Track": "Siphoning Track",
+            "TrackHint": "Starts with one slot marked. Short rest during a hunt: mark 1. Long rest: mark 2. When a colossus is defeated or the track is full, roll a d12 per marked slot.",
+            "ShortRest": "Short rest",
+            "LongRest": "Long rest",
+            "RollSiphon": "Roll {n}d12",
+            "Power": "Kudamat’s Power",
+            "SetPower": "Set Kudamat’s Power",
+            "PowerHint": "If he emerged now: Major threshold {major}, Severe threshold {severe}.",
+            "Slain": "Colossi slain",
+            "Level": "party level {level}",
+            "AddSlain": "Add a slain colossus",
+            "ColossusName": "Colossus name",
+            "RemoveSlain": "Remove a slain colossus",
+            "RemoveSlainConfirm": "Remove {name} from the colossi slain?",
+            "AlreadySlain": "{name} is already among the colossi slain.",
+            "UnknownColossus": "A colossus",
+            "Emerges": {
+                "Title": "Kudamat emerges",
+                "Slain": "All nine colossi are slain. Kudamat emerges from Godfell Mountain with a Power of {power}.",
+                "Power": "Kudamat’s Power reaches {power}. He emerges from Godfell Mountain.",
+                "Thresholds": "Build him as a Colossus adversary: Major threshold {major}, Severe threshold {severe}."
+            },
+            "Build": "Build Kudamat",
+            "Rebuild": "Build Kudamat again",
+            "Built": "Kudamat is built as a colossus framework (Major {major}, Severe {severe}). Add his segments in the Colossus tab of his settings.",
+            "Rules": "Emergence of Kudamat",
+            "HuntRules": "Hunts and Interludes",
+            "Reset": "Reset",
+            "ResetConfirm": "Reset the Siphoning Track, Kudamat’s Power and the colossi slain?",
+            "NotHunting": "The party isn’t on a hunt: rests don’t mark the Siphoning Track.",
+            "LastRest": {
+                "short": "Last marked: a short rest on {date}.",
+                "long": "Last marked: a long rest on {date}."
+            },
+            "Siphon": {
+                "Title": "Kudamat siphons",
+                "Short": "A short rest during the hunt: the Siphoning Track is at {track}/{max}.",
+                "Long": "A long rest during the hunt: the Siphoning Track is at {track}/{max}.",
+                "RollTitle": "The soul shard feeds Kudamat",
+                "Result": "Kudamat’s Power rises by {gained}: {from} → <strong>{to}</strong>. The Siphoning Track resets to 1.",
+                "Reason": {
+                    "full": "The Siphoning Track is full.",
+                    "defeated": "A colossus is defeated.",
+                    "manual": "The GM rolls the siphon."
+                }
+            },
+            "Shatter": {
+                "Title": "A soul shard shatters",
+                "Body": "With {name} slain, the soul shard it guarded shatters, and Kudamat can no longer draw on it.",
+                "Level": "The PCs immediately level up, to level {level}.",
+                "Count": "Colossi slain: {n} of {total}."
+            },
+            "Log": {
+                "Title": "Log",
+                "Short": "Short rest: Siphoning Track {from} → {to}",
+                "Long": "Long rest: Siphoning Track {from} → {to}",
+                "Siphon": "Rolled {n}d12: Kudamat gains {gained}, Power {power}",
+                "Slain": "{name} slain",
+                "Unslain": "{name} removed from the colossi slain",
+                "PowerSet": "Power set to {power}",
+                "Built": "Kudamat built (Major {major}, Severe {severe})",
+                "Reset": "Campaign reset",
+                "Phase": {
+                    "hunt": "A hunt begins",
+                    "interlude": "An interlude begins"
+                }
+            }
+        },
+        "Settings": {
+            "Segment": {
+                "Legend": "Colossus Board",
+                "Key": "Segment key",
+                "KeyHint": "Short name other segments use to say they’re adjacent to this one, like “torso” or “leg”.",
+                "Adjacent": "Adjacent segments",
+                "AdjacentHint": "Keys of the segments a PC can leap to from this one, separated by commas. Leave it empty to allow every segment. You can also link cards on the board.",
+                "Ground": "Climbable from the ground",
+                "GroundHint": "Off for segments high above the ground: they can only be reached from adjacent segments, or once the colossus is Collapsed."
+            },
+            "damageRules": {
+                "Name": "Segment damage rules",
+                "Hint": "Apply Strike, Armored, Weak Point, Invulnerable and Protected when a segment takes damage, and whisper the GM what changed."
+            },
+            "enforce": {
+                "Name": "Broken and Destroyed segments can’t act",
+                "Hint": "Stop Broken segments from using actions and reactions, Destroyed segments from using features, and a segment’s standard attack from targeting a PC riding it."
+            },
+            "riderAdvantage": {
+                "Name": "Advantage while riding",
+                "Hint": "A PC on a segment has advantage on attacks against that segment."
+            },
+            "collapse": {
+                "Name": "Collapse automatically",
+                "Hint": "Collapse the colossus when a segment’s Collapse feature is triggered (legs marked or Destroyed)."
+            },
+            "climbRolls": {
+                "Name": "Roll to climb",
+                "Hint": "Climbing onto a segment or leaping to another asks for an Agility or Strength Roll against the segment’s Difficulty. Off: climbing just moves the PC."
+            },
+            "moveTokens": {
+                "Name": "Move PC tokens onto segments",
+                "Hint": "When a PC climbs onto a segment, move their token onto the segment’s token."
+            },
+            "autoArrange": {
+                "Name": "Arrange segment tokens",
+                "Hint": "When a colossus is placed, arrange its segment tokens in the shape of the colossus instead of scattering them."
+            },
+            "arrangeScale": {
+                "Name": "Arrangement scale",
+                "Hint": "Grid squares per board cell when arranging segment tokens on the canvas."
+            },
+            "conditions": {
+                "Name": "Shaken, Rattled and Trapped conditions",
+                "Hint": "Add the colossi’s conditions as token statuses. Shaken blocks the Hope of the next roll with Hope; Rattled gives disadvantage on reaction rolls until the next roll with Hope."
+            },
+            "campaign": {
+                "Name": "Emergence of Kudamat",
+                "Hint": "Track the Siphoning Track, Kudamat’s Power and the colossi slain, and offer to shatter the soul shard when a colossus is defeated."
+            },
+            "autoSiphon": {
+                "Name": "Rests mark the Siphoning Track",
+                "Hint": "During a hunt, a short rest marks the track once and a long rest twice."
+            },
+            "restWindow": {
+                "Name": "Rest window (minutes)",
+                "Hint": "Every PC posts their own rest card. Rests of the same kind within this many minutes count as one."
+            },
+            "campaignPublic": {
+                "Name": "Players see Kudamat’s Power",
+                "Hint": "Siphon rolls and track changes are public. Off: only the GM sees them."
+            }
+        }
+    }
+}

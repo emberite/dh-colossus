@@ -1,0 +1,38 @@
+{
+  "_id": "oZ2CVGhaMBAK8ImK",
+  "name": "Climbing (+3)",
+  "type": "feature",
+  "img": "icons/sundries/misc/ladder.webp",
+  "system": {
+    "description": "<p>This segment’s Difficulty gains a +3 bonus against action rolls made to climb it.</p><p><em>This could also be a negative number, such as –3, which would mean the Difficulty to climb is reduced. Rename the feature to change the number.</em></p>",
+    "featureForm": "passive",
+    "actions": {},
+    "resource": null,
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "gmNotes": "",
+    "granter": null,
+    "actorResources": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!oZ2CVGhaMBAK8ImK"
+}

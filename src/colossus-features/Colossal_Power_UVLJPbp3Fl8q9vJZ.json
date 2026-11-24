@@ -1,0 +1,38 @@
+{
+  "_id": "UVLJPbp3Fl8q9vJZ",
+  "name": "Colossal Power",
+  "type": "feature",
+  "img": "icons/magic/control/fear-fright-monster-grin-red-orange.webp",
+  "system": {
+    "description": "<p>When the colossus fails an attack, you gain a Fear.</p>",
+    "featureForm": "reaction",
+    "actions": {},
+    "resource": null,
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "gmNotes": "",
+    "granter": null,
+    "actorResources": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 12000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!UVLJPbp3Fl8q9vJZ"
+}

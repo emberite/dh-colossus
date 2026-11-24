@@ -1,0 +1,197 @@
+{
+  "_id": "ItRLbZ1zFWHOcMr2",
+  "name": "Kelir Shell",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+  "system": {
+    "difficulty": 16,
+    "damageThresholds": {
+      "major": 30,
+      "severe": 65
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 6
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "dSEj4e5hiNrxhVBN": {
+        "name": "Contempt",
+        "value": 2,
+        "description": ""
+      },
+      "zU6ztA2HEAY60S4Q": {
+        "name": "Huge",
+        "value": 4,
+        "description": ""
+      },
+      "BpDHx4YGAFVYMul7": {
+        "name": "Sense Movement",
+        "value": 4,
+        "description": ""
+      }
+    },
+    "tier": 4,
+    "description": "<p>A crablike, mountainous beast whose children scurry in and around her, bringing food as tribute.</p>",
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Shell",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "KZsx8OXs2hPu1MPM",
+      "name": "Armored",
+      "type": "feature",
+      "img": "icons/equipment/shield/heater-steel-worn.webp",
+      "system": {
+        "description": "<p>When the Shell marks HP from an attack, it marks 1 fewer HP.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!ItRLbZ1zFWHOcMr2.KZsx8OXs2hPu1MPM"
+    },
+    {
+      "_id": "dclzubfojvtd574P",
+      "name": "Contagious Fury",
+      "type": "feature",
+      "img": "icons/magic/control/hypnosis-mesmerism-swirl.webp",
+      "system": {
+        "description": "<p>All PCs in front of the Head within Far range replace their Hope Die with a d8 the next time they make an action roll as they struggle to keep Kelir’s hatred from consuming them.</p>",
+        "featureForm": "action",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!ItRLbZ1zFWHOcMr2.dclzubfojvtd574P"
+    }
+  ],
+  "effects": [],
+  "folder": "9f7lcxR3fWSIZdya",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "shell",
+        "adjacent": [
+          "head",
+          "leg",
+          "claw",
+          "body-cavity"
+        ],
+        "ground": false,
+        "attack": false,
+        "slots": [
+          {
+            "label": "Shell",
+            "x": 3,
+            "y": 2,
+            "w": 6,
+            "h": 3
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!ItRLbZ1zFWHOcMr2"
+}

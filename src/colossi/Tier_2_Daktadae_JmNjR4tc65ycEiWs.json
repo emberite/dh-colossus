@@ -1,0 +1,22 @@
+{
+  "_id": "JmNjR4tc65ycEiWs",
+  "name": "Tier 2: Daktadae",
+  "type": "Actor",
+  "sorting": "m",
+  "sort": 200000,
+  "color": "#4b402e",
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!folders!JmNjR4tc65ycEiWs"
+}

@@ -1,0 +1,304 @@
+{
+  "_id": "H8XGWTdPhTGco7h6",
+  "name": "Ikeri Head",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-301-colossus-ikeri.webp",
+  "system": {
+    "difficulty": 16,
+    "damageThresholds": {
+      "major": 11,
+      "severe": 22
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 5
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "Z70CqgboVUYsyaJw": {
+        "name": "Eagle Eyes",
+        "value": 3,
+        "description": ""
+      },
+      "rQjODEsHBXgVzjCr": {
+        "name": "Huge",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 1,
+    "description": "<p>This apelike creature has the face of a bird. They are made of stone and carry an enormous mesa upon their back.</p>",
+    "attack": {
+      "name": "Peck",
+      "range": "melee",
+      "roll": {
+        "bonus": 2,
+        "type": "attack",
+        "trait": null,
+        "difficulty": null,
+        "advState": "neutral",
+        "diceRolling": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "compare": null,
+          "treshold": null
+        },
+        "useDefault": false
+      },
+      "damage": {
+        "main": {
+          "value": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "multiplier": "flat",
+            "flatMultiplier": 1,
+            "dice": "d10",
+            "bonus": 1
+          },
+          "applyTo": "hitPoints",
+          "type": [
+            "physical"
+          ],
+          "base": false,
+          "resultBased": false,
+          "valueAlt": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "bonus": null,
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            }
+          },
+          "includeBase": false,
+          "direct": false,
+          "fullRestore": false,
+          "itemId": null
+        },
+        "resources": {}
+      },
+      "_id": "i5rasqG1TDH0QWGo",
+      "systemPath": "attack",
+      "type": "attack",
+      "description": "",
+      "img": "icons/commodities/bones/beak-hooked-red.webp",
+      "chatDisplay": false,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+        "value": null,
+        "max": null,
+        "recovery": null,
+        "consumeOnSuccess": false
+      },
+      "target": {
+        "type": "any",
+        "amount": 1
+      },
+      "effects": [],
+      "save": {
+        "trait": null,
+        "difficulty": null,
+        "damageMod": "none"
+      },
+      "baseAction": true,
+      "originItem": {
+        "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+    },
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Head",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-301-colossus-ikeri.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "jRPLfLXhu24bdxNJ",
+      "name": "Fatal",
+      "type": "feature",
+      "img": "icons/magic/death/projectile-skull-fire-orange-red.webp",
+      "system": {
+        "description": "<p>When the Head is <em>Destroyed</em>, the colossus is defeated.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!H8XGWTdPhTGco7h6.jRPLfLXhu24bdxNJ"
+    },
+    {
+      "_id": "TXpnPUg3xokl0h2p",
+      "name": "Strike (Melee)",
+      "type": "feature",
+      "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+      "system": {
+        "description": "<p>The Head is immune to damage from attacks not made within Melee range.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!H8XGWTdPhTGco7h6.TXpnPUg3xokl0h2p"
+    },
+    {
+      "_id": "SZMTvzBZHOW1HjI5",
+      "name": "Follow-Up",
+      "type": "feature",
+      "img": "icons/skills/melee/strike-slashes-orange.webp",
+      "system": {
+        "description": "<p>When the Head succeeds on an attack against a target, it can immediately make an attack against another target it hasn’t attacked during this GM turn.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!H8XGWTdPhTGco7h6.SZMTvzBZHOW1HjI5"
+    }
+  ],
+  "effects": [],
+  "folder": "hxZcOOZuv6mu8iiL",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "head",
+        "adjacent": [
+          "torso"
+        ],
+        "ground": true,
+        "attack": true,
+        "slots": [
+          {
+            "label": "Head",
+            "x": 5,
+            "y": 0,
+            "w": 3,
+            "h": 2
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!H8XGWTdPhTGco7h6"
+}

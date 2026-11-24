@@ -1,0 +1,38 @@
+{
+  "_id": "rcnHBU5udSYwkfhE",
+  "name": "Not Climbable",
+  "type": "feature",
+  "img": "icons/environment/wilderness/terrain-rocks-brown.webp",
+  "system": {
+    "description": "<p>This segment can’t be climbed.</p>",
+    "featureForm": "passive",
+    "actions": {},
+    "resource": null,
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "gmNotes": "",
+    "granter": null,
+    "actorResources": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!rcnHBU5udSYwkfhE"
+}

@@ -1,0 +1,138 @@
+<div class="dhco-shell">
+{{#if empty}}
+    <div class="dhco-empty">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <h2>{{localize "DHCO.Board.EmptyTitle"}}</h2>
+        <p>{{localize "DHCO.Board.EmptyBody"}}</p>
+    </div>
+{{else}}
+    <header class="dhco-head">
+        <div class="dhco-head-art" style="background-image:url('{{model.img}}')"></div>
+        <div class="dhco-head-main">
+            {{#if colossi}}
+                <select class="dhco-pick" data-action="pick">
+                    {{#each colossi}}<option value="{{id}}" {{#if active}}selected{{/if}}>{{name}}</option>{{/each}}
+                </select>
+            {{/if}}
+            <h1><a data-action="sheet" data-tooltip="{{localize 'DHCO.Board.Sheet'}}">{{model.name}}</a></h1>
+            <div class="dhco-stats">
+                <span class="dhco-tier">{{localize "DHCO.Board.Tier" tier=model.tier}}</span>
+                <span class="dhco-thresholds" data-tooltip="{{localize 'DHCO.Board.Thresholds'}}"><b>{{model.major}}</b><i class="fa-solid fa-diamond"></i><b>{{model.severe}}</b></span>
+                <span class="dhco-stress" data-tooltip="{{localize 'DHCO.Board.Stress'}} {{model.stressText}}">
+                    {{#each model.stress}}<a class="pip {{#if marked}}on{{/if}}" {{#if @root.gm}}data-action="stress" data-i="{{i}}"{{/if}}></a>{{/each}}
+                </span>
+            </div>
+            <div class="dhco-states">
+                {{#if model.defeated}}<span class="dhco-state victory"><i class="fa-solid fa-gem"></i> <span>{{localize "DHCO.Board.Defeated"}}</span><b class="sub">{{model.defeated}}</b></span>{{/if}}
+                {{#if model.flying}}<span class="dhco-state flying"><i class="fa-solid fa-feather"></i> {{localize "DHCO.Board.Flying"}}</span>{{/if}}
+                {{#if model.collapsed}}
+                    <span class="dhco-state collapsed"><i class="fa-solid fa-house-crack"></i> <span>{{localize "DHCO.Board.Collapsed"}}</span>{{#if model.collapsedPermanent}}<b class="sub">{{localize "DHCO.Board.Permanently"}}</b>{{else}}{{#if model.collapsedTokens}}<b class="sub">{{localize "DHCO.Board.Tokens" n=model.collapsedTokens}}</b>{{/if}}{{/if}}
+                        {{#if gm}}{{#unless model.collapsedPermanent}}{{#if model.collapsedTokens}}<a data-action="collapsed" data-delta="-1" data-tooltip="{{localize 'DHCO.Board.ClearToken'}}"><i class="fa-solid fa-minus"></i></a>{{/if}}{{/unless}}{{/if}}
+                    </span>
+                {{/if}}
+                {{#if gm}}
+                    <a class="dhco-state ghost" data-action="collapsed" data-op="toggle"><i class="fa-solid fa-house-crack"></i> {{#if model.collapsed}}{{localize "DHCO.Board.Rise"}}{{else}}{{localize "DHCO.Board.Collapse"}}{{/if}}</a>
+                {{/if}}
+            </div>
+        </div>
+        <div class="dhco-head-tools">
+            {{#if gm}}
+                <button type="button" data-action="edit" class="{{#if editing}}active{{/if}}" data-tooltip="{{localize 'DHCO.Board.EditHint'}}"><i class="fa-solid fa-pen-ruler"></i> {{#if editing}}{{localize "DHCO.Board.Done"}}{{else}}{{localize "DHCO.Board.Edit"}}{{/if}}</button>
+                <button type="button" data-action="arrange" data-tooltip="{{localize 'DHCO.Board.ArrangeHint'}}"><i class="fa-solid fa-chess-board"></i> {{localize "DHCO.Board.Arrange"}}</button>
+                <button type="button" data-action="defeat"><i class="fa-solid fa-gem"></i> {{#if model.defeated}}{{localize "DHCO.Board.Undefeat"}}{{else}}{{localize "DHCO.Board.Defeat"}}{{/if}}</button>
+            {{/if}}
+            {{#if hasCore}}<button type="button" data-action="rules" data-page="battle"><i class="fa-solid fa-book-open"></i> {{localize "DHCO.Board.Rules"}}</button>{{/if}}
+        </div>
+    </header>
+
+    <div class="dhco-body">
+        <section class="dhco-board-wrap">
+            {{#if missingParts}}
+                <div class="dhco-banner">{{localize "DHCO.Board.MissingParts" n=missingParts}} {{#if gm}}<button type="button" data-action="placeParts"><i class="fa-solid fa-puzzle-piece"></i> {{localize "DHCO.Board.PlaceParts"}}</button>{{/if}}</div>
+            {{/if}}
+            {{#if editing}}<div class="dhco-banner edit"><i class="fa-solid fa-pen-ruler"></i> {{localize "DHCO.Board.Editing"}}</div>{{/if}}
+            <div class="dhco-board-grid {{#if editing}}editing{{/if}} {{#if model.defeated}}defeated{{/if}}">
+                <svg class="dhco-links" viewBox="0 0 1200 1000" preserveAspectRatio="none" aria-hidden="true">
+                    {{#each lines}}<line x1="{{x1}}" y1="{{y1}}" x2="{{x2}}" y2="{{y2}}"></line>{{/each}}
+                </svg>
+                {{#each cards}}
+                    <div class="dhco-card {{#if broken}}broken{{/if}} {{#if destroyed}}destroyed{{/if}} {{#if mine}}mine{{/if}} {{#if linkFrom}}link-from{{/if}} {{#if adjacent}}link-adjacent{{/if}} {{#unless ground}}no-ground{{/unless}}"
+                         style="{{style}}" data-id="{{id}}" data-x="{{x}}" data-y="{{y}}" data-w="{{w}}" data-h="{{h}}" {{#unless @root.editing}}data-action="card"{{/unless}}>
+                        <div class="dhco-card-top">
+                            <span class="dhco-label">{{label}}</span>
+                            <span class="dhco-diff" data-tooltip="{{localize 'DHCO.Board.Difficulty'}}{{#if climbMod}} · {{localize 'DHCO.Board.ClimbDifficulty' n=climbDifficulty}}{{/if}}">{{difficulty}}</span>
+                        </div>
+                        <div class="dhco-hp" data-tooltip="{{localize 'DHCO.Board.HP'}} {{hpText}}">
+                            {{#if hp}}{{#each hp}}<a class="pip {{#if marked}}on{{/if}}" {{#if @root.gm}}data-action="hp" data-i="{{i}}"{{/if}}></a>{{/each}}{{else}}<span class="dhco-nohp">{{hpText}}</span>{{/if}}
+                        </div>
+                        {{#if badges.length}}
+                            <div class="dhco-badges">{{#each badges}}<span class="dhco-badge {{key}}" data-tooltip="{{tip}}"><i class="{{icon}}"></i>{{#if text}}<b>{{text}}</b>{{/if}}</span>{{/each}}</div>
+                        {{/if}}
+                        {{#if riders.length}}
+                            <div class="dhco-riders">{{#each riders}}<img src="{{img}}" alt="{{name}}" data-tooltip="{{name}}" data-rider="{{uuid}}" class="{{#if mine}}mine{{/if}}">{{/each}}</div>
+                        {{/if}}
+                        {{#unless @root.editing}}{{#if canClimb}}<button type="button" data-action="climb" class="climb" data-tooltip="{{localize 'DHCO.Board.ClimbHint' n=climbDifficulty}}"><i class="fa-solid fa-person-hiking"></i> {{climbDifficulty}}</button>{{/if}}{{/unless}}
+                        {{#if broken}}{{#unless destroyed}}<div class="dhco-broken-tag"><i class="fa-solid fa-link-slash"></i> {{localize "DHCO.Board.Broken"}}{{#if brokenTokens}} ×{{brokenTokens}}{{/if}}</div>{{/unless}}{{/if}}
+                        {{#if destroyed}}<div class="dhco-destroyed-tag">{{localize "DHCO.Board.Destroyed"}}</div>{{/if}}
+                        <div class="dhco-card-tools">
+                            {{#if @root.editing}}
+                                <a data-action="ground" data-tooltip="{{#if ground}}{{localize 'DHCO.Board.GroundOn'}}{{else}}{{localize 'DHCO.Board.GroundOff'}}{{/if}}"><i class="fa-solid {{#if ground}}fa-shoe-prints{{else}}fa-cloud{{/if}}"></i></a>
+                            {{else}}
+                                {{#if @root.gm}}
+                                    {{#if attack}}<a data-action="attack" data-tooltip="{{attackName}}"><i class="fa-solid fa-hand-fist"></i></a>{{/if}}
+                                    <a data-action="broken" data-delta="1" data-tooltip="{{localize 'DHCO.Board.AddBroken'}}"><i class="fa-solid fa-link-slash"></i></a>
+                                    {{#if brokenTokens}}<a data-action="broken" data-delta="-1" data-tooltip="{{localize 'DHCO.Board.ClearBroken'}}"><i class="fa-solid fa-link"></i></a>{{/if}}
+                                    <a data-action="sheet" data-tooltip="{{localize 'DHCO.Board.Sheet'}}"><i class="fa-solid fa-id-card"></i></a>
+                                {{/if}}
+                            {{/if}}
+                        </div>
+                        {{#if @root.editing}}<span class="dhco-resize"></span>{{/if}}
+                    </div>
+                {{/each}}
+                {{#if noSegments}}<div class="dhco-board-empty">{{localize "DHCO.Board.NoSegments"}}</div>{{/if}}
+            </div>
+            <div class="dhco-ground" data-drop="ground">
+                <span class="dhco-ground-label"><i class="fa-solid fa-mountain"></i> {{localize "DHCO.Board.Ground"}}</span>
+                {{#each ground}}<img src="{{img}}" alt="{{name}}" data-tooltip="{{name}}" data-rider="{{uuid}}" class="{{#if mine}}mine{{/if}}">{{/each}}
+                {{#unless ground.length}}<span class="dhco-faint">{{localize "DHCO.Board.NobodyOnGround"}}</span>{{/unless}}
+            </div>
+        </section>
+
+        <aside class="dhco-side">
+            {{#if me}}
+                <div class="dhco-me">
+                    <img src="{{me.img}}" alt="">
+                    <div>
+                        <b>{{me.name}}</b>
+                        <span>{{#if me.on}}{{localize "DHCO.Board.On" segment=me.on}}{{else}}{{localize "DHCO.Board.OnGround"}}{{/if}}</span>
+                    </div>
+                    {{#if me.on}}<button type="button" data-action="down" data-reason="down" data-tooltip="{{localize 'DHCO.Board.ClimbDownHint'}}"><i class="fa-solid fa-person-arrow-down-to-line"></i></button>{{/if}}
+                </div>
+                <p class="dhco-hint">{{localize "DHCO.Board.MeHint"}}</p>
+            {{else}}
+                {{#unless gm}}<p class="dhco-hint">{{localize "DHCO.Board.NoCharacter"}}</p>{{/unless}}
+            {{/if}}
+            {{#if gm}}<p class="dhco-hint">{{localize "DHCO.Board.GMHint"}}</p>{{/if}}
+
+            <h3>{{localize "DHCO.Board.Features"}}</h3>
+            <ul class="dhco-features">
+                {{#each model.features}}
+                    <li><a data-action="feature" data-item="{{id}}"><span class="form {{form}}">{{formLabel}}</span> {{name}}</a></li>
+                {{/each}}
+            </ul>
+            <h3>{{localize "DHCO.Board.Legend"}}</h3>
+            <ul class="dhco-legend">
+                <li><i class="fa-solid fa-skull"></i> {{localize "DHCO.Rule.fatal"}}</li>
+                <li><i class="fa-solid fa-link"></i> {{localize "DHCO.Rule.chain"}}</li>
+                <li><i class="fa-solid fa-crosshairs"></i> {{localize "DHCO.Rule.strike"}}</li>
+                <li><i class="fa-solid fa-shield"></i> {{localize "DHCO.Rule.armored"}}</li>
+                <li><i class="fa-solid fa-bullseye"></i> {{localize "DHCO.Rule.weakPoint"}}</li>
+                <li><i class="fa-solid fa-shield-halved"></i> {{localize "DHCO.Rule.invulnerable"}}</li>
+                <li><i class="fa-solid fa-lock"></i> {{localize "DHCO.Rule.protected"}}</li>
+                <li><i class="fa-solid fa-person-hiking"></i> {{localize "DHCO.Rule.climbing"}}</li>
+                <li><i class="fa-solid fa-arrow-down-wide-short"></i> {{localize "DHCO.Rule.cascade"}}</li>
+            </ul>
+        </aside>
+    </div>
+{{/if}}
+</div>

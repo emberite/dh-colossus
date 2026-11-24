@@ -1,0 +1,370 @@
+{
+  "_id": "ibyRp0cmVKJTVcD6",
+  "name": "Poy Wing",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-307-colossus-poy.webp",
+  "system": {
+    "difficulty": 16,
+    "damageThresholds": {
+      "major": 25,
+      "severe": 48
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 5
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "gb3lwIU3iWABzdDy": {
+        "name": "Attack From Above",
+        "value": 3,
+        "description": ""
+      },
+      "J8PFsluxOK26sE4R": {
+        "name": "Huge",
+        "value": 3,
+        "description": ""
+      },
+      "0A2jycX43x4nXgFc": {
+        "name": "Maneuver",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 3,
+    "description": "<p>This massive shoebill stork is formed from the dust of the Drylands and traps enemies in their cavernous beak.</p>",
+    "attack": {
+      "name": "Swipe",
+      "range": "melee",
+      "roll": {
+        "bonus": 2,
+        "type": "attack",
+        "trait": null,
+        "difficulty": null,
+        "advState": "neutral",
+        "diceRolling": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "compare": null,
+          "treshold": null
+        },
+        "useDefault": false
+      },
+      "damage": {
+        "main": {
+          "value": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "multiplier": "flat",
+            "flatMultiplier": 3,
+            "dice": "d12",
+            "bonus": 9
+          },
+          "applyTo": "hitPoints",
+          "type": [
+            "physical"
+          ],
+          "base": false,
+          "resultBased": false,
+          "valueAlt": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "bonus": null,
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            }
+          },
+          "includeBase": false,
+          "direct": false,
+          "fullRestore": false,
+          "itemId": null
+        },
+        "resources": {}
+      },
+      "_id": "LgvweqcKoDasA6ym",
+      "systemPath": "attack",
+      "type": "attack",
+      "description": "",
+      "img": "icons/commodities/biological/wing-lizard-brown.webp",
+      "chatDisplay": false,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+        "value": null,
+        "max": null,
+        "recovery": null,
+        "consumeOnSuccess": false
+      },
+      "target": {
+        "type": "any",
+        "amount": 1
+      },
+      "effects": [],
+      "save": {
+        "trait": null,
+        "difficulty": null,
+        "damageMod": "none"
+      },
+      "baseAction": true,
+      "originItem": {
+        "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+    },
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Wing",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-307-colossus-poy.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "ExCUe3qiKWT7ZcAW",
+      "name": "Dust Storm",
+      "type": "feature",
+      "img": "icons/magic/air/wind-weather-sailing-ship.webp",
+      "system": {
+        "description": "<p>Poy bats their wings, filling the air and making it much harder to see. Any attacks made by PCs beyond Melee range have disadvantage until the next GM turn.</p>",
+        "featureForm": "action",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!ibyRp0cmVKJTVcD6.ExCUe3qiKWT7ZcAW"
+    },
+    {
+      "_id": "8nLuUmQZk3CMLzSx",
+      "name": "Flap",
+      "type": "feature",
+      "img": "icons/commodities/biological/wing-lizard-brown.webp",
+      "system": {
+        "description": "<p>Poy violently flaps a Wing. <strong>Mark a Stress</strong> to make an attack against all targets on the Wing. Targets Poy succeeds against take <strong>3d8+4</strong> physical damage and are knocked back onto the Tail. If the Tail is <em>Destroyed</em>, they instead fall off Poy.</p>",
+        "featureForm": "action",
+        "actions": {
+          "6zUagqhVaUfTyxEw": {
+            "_id": "6zUagqhVaUfTyxEw",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Flap",
+            "img": "icons/commodities/biological/wing-lizard-brown.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [
+              {
+                "scalable": false,
+                "key": "stress",
+                "value": 1,
+                "step": null,
+                "itemId": null,
+                "consumeOnSuccess": false
+              }
+            ],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": null
+            },
+            "effects": [],
+            "range": "melee",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 3,
+                  "dice": "d8",
+                  "bonus": 4
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            },
+            "roll": {
+              "type": "attack",
+              "trait": null,
+              "difficulty": null,
+              "bonus": null,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": true
+            },
+            "save": {
+              "trait": null,
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!ibyRp0cmVKJTVcD6.8nLuUmQZk3CMLzSx"
+    }
+  ],
+  "effects": [],
+  "folder": "1esMEK5Eeazd3Ii7",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "wing",
+        "adjacent": [
+          "body"
+        ],
+        "ground": false,
+        "attack": true,
+        "slots": [
+          {
+            "label": "Left Wing",
+            "x": 4,
+            "y": 0,
+            "w": 4,
+            "h": 3
+          },
+          {
+            "label": "Right Wing",
+            "x": 4,
+            "y": 7,
+            "w": 4,
+            "h": 3
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!ibyRp0cmVKJTVcD6"
+}

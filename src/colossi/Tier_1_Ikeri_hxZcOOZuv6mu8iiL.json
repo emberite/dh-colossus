@@ -1,0 +1,22 @@
+{
+  "_id": "hxZcOOZuv6mu8iiL",
+  "name": "Tier 1: Ikeri",
+  "type": "Actor",
+  "sorting": "m",
+  "sort": 100000,
+  "color": "#4b402e",
+  "folder": null,
+  "description": "",
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!folders!hxZcOOZuv6mu8iiL"
+}

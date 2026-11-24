@@ -1,0 +1,38 @@
+{
+  "_id": "YUe2pk9lK7ocqOFP",
+  "name": "Strike (Melee)",
+  "type": "feature",
+  "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+  "system": {
+    "description": "<p>This segment is immune to damage from attacks not made within Melee range.</p><p><em>Melee could be replaced with any range to change up this feature: rename it “Strike (Very Close)”, for example.</em></p>",
+    "featureForm": "passive",
+    "actions": {},
+    "resource": null,
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "gmNotes": "",
+    "granter": null,
+    "actorResources": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!YUe2pk9lK7ocqOFP"
+}

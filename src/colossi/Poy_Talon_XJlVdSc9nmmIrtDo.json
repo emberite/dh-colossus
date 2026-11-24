@@ -1,0 +1,371 @@
+{
+  "_id": "XJlVdSc9nmmIrtDo",
+  "name": "Poy Talon",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-307-colossus-poy.webp",
+  "system": {
+    "difficulty": 14,
+    "damageThresholds": {
+      "major": 25,
+      "severe": 48
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 5
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "gb3lwIU3iWABzdDy": {
+        "name": "Attack From Above",
+        "value": 3,
+        "description": ""
+      },
+      "J8PFsluxOK26sE4R": {
+        "name": "Huge",
+        "value": 3,
+        "description": ""
+      },
+      "0A2jycX43x4nXgFc": {
+        "name": "Maneuver",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 3,
+    "description": "<p>This massive shoebill stork is formed from the dust of the Drylands and traps enemies in their cavernous beak.</p>",
+    "attack": {
+      "name": "Talon Strike",
+      "range": "melee",
+      "roll": {
+        "bonus": 2,
+        "type": "attack",
+        "trait": null,
+        "difficulty": null,
+        "advState": "neutral",
+        "diceRolling": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "compare": null,
+          "treshold": null
+        },
+        "useDefault": false
+      },
+      "damage": {
+        "main": {
+          "value": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "multiplier": "flat",
+            "flatMultiplier": 3,
+            "dice": "d10",
+            "bonus": 5
+          },
+          "applyTo": "hitPoints",
+          "type": [
+            "physical"
+          ],
+          "base": false,
+          "resultBased": false,
+          "valueAlt": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "bonus": null,
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            }
+          },
+          "includeBase": false,
+          "direct": false,
+          "fullRestore": false,
+          "itemId": null
+        },
+        "resources": {}
+      },
+      "_id": "1YuOgWzwsuAE7k5e",
+      "systemPath": "attack",
+      "type": "attack",
+      "description": "",
+      "img": "icons/creatures/claws/claw-talons-glowing-orange.webp",
+      "chatDisplay": false,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+        "value": null,
+        "max": null,
+        "recovery": null,
+        "consumeOnSuccess": false
+      },
+      "target": {
+        "type": "any",
+        "amount": 1
+      },
+      "effects": [],
+      "save": {
+        "trait": null,
+        "difficulty": null,
+        "damageMod": "none"
+      },
+      "baseAction": true,
+      "originItem": {
+        "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+    },
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Talon",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-307-colossus-poy.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "8cr8tU8JgHpgKQaF",
+      "name": "Pick Up",
+      "type": "feature",
+      "img": "icons/creatures/claws/claw-talons-yellow-red.webp",
+      "system": {
+        "description": "<p><strong>Spend a Fear</strong> to make an attack against a target within Melee range. If there’s an additional target within Very Close range of them, you can spotlight both Talons at once and make an attack against both targets instead. On a success, Poy picks up their targets, flies straight upwards, and drops them. If a target hits the ground, they take <strong>5d20+4</strong> physical damage.</p>",
+        "featureForm": "action",
+        "actions": {
+          "GZRcRuWfvWU65rc1": {
+            "_id": "GZRcRuWfvWU65rc1",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Pick Up",
+            "img": "icons/creatures/claws/claw-talons-yellow-red.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [
+              {
+                "scalable": false,
+                "key": "fear",
+                "value": 1,
+                "step": null,
+                "itemId": null,
+                "consumeOnSuccess": false
+              }
+            ],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": 1
+            },
+            "effects": [],
+            "range": "melee",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 5,
+                  "dice": "d20",
+                  "bonus": 4
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            },
+            "roll": {
+              "type": "attack",
+              "trait": null,
+              "difficulty": null,
+              "bonus": null,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": true
+            },
+            "save": {
+              "trait": null,
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!XJlVdSc9nmmIrtDo.8cr8tU8JgHpgKQaF"
+    },
+    {
+      "_id": "gn3CdYB3C628k41Q",
+      "name": "Cascade",
+      "type": "feature",
+      "img": "icons/magic/earth/strike-fist-stone-gray.webp",
+      "system": {
+        "description": "<p>When this segment is <em>Destroyed</em>, the Neck must mark a HP.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!XJlVdSc9nmmIrtDo.gn3CdYB3C628k41Q"
+    }
+  ],
+  "effects": [],
+  "folder": "1esMEK5Eeazd3Ii7",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "talon",
+        "adjacent": [
+          "body",
+          "tail"
+        ],
+        "ground": true,
+        "attack": true,
+        "slots": [
+          {
+            "label": "Left Talon",
+            "x": 8,
+            "y": 3,
+            "w": 2,
+            "h": 2
+          },
+          {
+            "label": "Right Talon",
+            "x": 8,
+            "y": 5,
+            "w": 2,
+            "h": 2
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!XJlVdSc9nmmIrtDo"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "MN2Yx8bDfcZWtjud",
+  "name": "Collapsed",
+  "type": "feature",
+  "img": "icons/magic/earth/projectile-boulder-debris.webp",
+  "system": {
+    "description": "<p>When the colossus marks at least 1 HP on all Leg segments, it <em>Collapses</em>. While the colossus is Collapsed, segments that aren’t accessible from the ground can be climbed.</p><p><em>This reaction is typically used in conjunction with the “Not Climbable” passive feature. You can always change the trigger out for something that makes more sense within the fiction as it occurs.</em></p>",
+    "featureForm": "reaction",
+    "actions": {},
+    "resource": null,
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "gmNotes": "",
+    "granter": null,
+    "actorResources": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 11000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!items!MN2Yx8bDfcZWtjud"
+}

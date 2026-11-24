@@ -1,0 +1,75 @@
+<div class="dhco-shell dhco-scroll">
+    <header class="dhco-dry-head" {{#if art}}style="background-image:linear-gradient(180deg, transparent 30%, var(--dhco-bg) 100%), url('{{art}}')"{{/if}}>
+        <h1>{{localize "DHCO.Drylands.Heading"}}</h1>
+        <p>{{localize "DHCO.Drylands.Sub"}}</p>
+    </header>
+
+    <section class="dhco-dry-phase">
+        <div class="dhco-seg-control">
+            <button type="button" class="{{#if hunt}}active{{/if}}" {{#if gm}}data-action="phase" data-phase="hunt"{{else}}disabled{{/if}}><i class="fa-solid fa-crosshairs"></i> {{localize "DHCO.Drylands.Phase.hunt"}}</button>
+            <button type="button" class="{{#unless hunt}}active{{/unless}}" {{#if gm}}data-action="phase" data-phase="interlude"{{else}}disabled{{/if}}><i class="fa-solid fa-mug-hot"></i> {{localize "DHCO.Drylands.Phase.interlude"}}</button>
+        </div>
+        <p class="dhco-hint">{{#if hunt}}{{localize "DHCO.Drylands.PhaseBody.hunt"}}{{else}}{{localize "DHCO.Drylands.PhaseBody.interlude"}}{{/if}}</p>
+    </section>
+
+    <section class="dhco-dry-block">
+        <h2><i class="fa-solid fa-droplet"></i> {{localize "DHCO.Drylands.Track"}} <small>{{trackValue}}/{{trackMax}}</small></h2>
+        <div class="dhco-track">
+            {{#each track}}<a class="box {{#if marked}}on{{/if}}" {{#if @root.gm}}data-action="track" data-i="{{i}}"{{/if}}></a>{{/each}}
+        </div>
+        <p class="dhco-hint">{{localize "DHCO.Drylands.TrackHint"}}{{#if lastRest}} {{lastRest}}{{/if}}</p>
+        {{#if gm}}
+            <div class="dhco-row">
+                <button type="button" data-action="rest" data-kind="short"><i class="fa-solid fa-mug-saucer"></i> {{localize "DHCO.Drylands.ShortRest"}}</button>
+                <button type="button" data-action="rest" data-kind="long"><i class="fa-solid fa-campground"></i> {{localize "DHCO.Drylands.LongRest"}}</button>
+                <button type="button" data-action="siphon" class="accent"><i class="fa-solid fa-dice-d20"></i> {{localize "DHCO.Drylands.RollSiphon" n=trackValue}}</button>
+            </div>
+        {{/if}}
+    </section>
+
+    <section class="dhco-dry-block">
+        <h2><i class="fa-solid fa-bolt"></i> {{localize "DHCO.Drylands.Power"}} <small>{{power}}/{{powerMax}}</small>
+            {{#if gm}}<a data-action="power" data-tooltip="{{localize 'DHCO.Drylands.SetPower'}}"><i class="fa-solid fa-pen"></i></a>{{/if}}</h2>
+        <div class="dhco-power"><div class="fill" style="width:{{powerPct}}%"></div><span>{{power}}</span></div>
+        <p class="dhco-hint">{{localize "DHCO.Drylands.PowerHint" major=thresholds.major severe=thresholds.severe}}</p>
+    </section>
+
+    <section class="dhco-dry-block">
+        <h2><i class="fa-solid fa-gem"></i> {{localize "DHCO.Drylands.Slain"}} <small>{{slainCount}}/9 · {{localize "DHCO.Drylands.Level" level=level}}</small></h2>
+        <div class="dhco-shards">
+            {{#each slain}}
+                <div class="shard {{#if empty}}empty{{/if}}" {{#unless empty}}data-tooltip="{{name}} · {{date}}"{{/unless}}>
+                    {{#if empty}}<span>{{n}}</span>{{else}}
+                        {{#if img}}<img src="{{img}}" alt="">{{else}}<i class="fa-solid fa-gem"></i>{{/if}}
+                        <b>{{name}}</b>
+                        {{#if @root.gm}}<a class="x" data-action="unslay" data-n="{{n}}"><i class="fa-solid fa-xmark"></i></a>{{/if}}
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>
+        {{#if gm}}<div class="dhco-row"><button type="button" data-action="slay"><i class="fa-solid fa-plus"></i> {{localize "DHCO.Drylands.AddSlain"}}</button></div>{{/if}}
+    </section>
+
+    {{#if emerged}}
+        <section class="dhco-dry-block emerged">
+            <h2><i class="fa-solid fa-mountain"></i> {{localize "DHCO.Drylands.Emerges.Title"}}</h2>
+            <p>{{localize "DHCO.Drylands.Emerges.Thresholds" major=thresholds.major severe=thresholds.severe}}</p>
+            {{#if gm}}<button type="button" data-action="build" class="accent"><i class="fa-solid fa-hammer"></i> {{#if kudamat}}{{localize "DHCO.Drylands.Rebuild"}}{{else}}{{localize "DHCO.Drylands.Build"}}{{/if}}</button>{{/if}}
+        </section>
+    {{/if}}
+
+    {{#if log.length}}
+        <section class="dhco-dry-block">
+            <h2><i class="fa-solid fa-scroll"></i> {{localize "DHCO.Drylands.Log.Title"}}</h2>
+            <ul class="dhco-log">{{#each log}}<li><span>{{date}}</span> {{text}}</li>{{/each}}</ul>
+        </section>
+    {{/if}}
+
+    <footer class="dhco-row dhco-foot">
+        {{#if hasCore}}
+            <button type="button" data-action="rules" data-page="kudamat"><i class="fa-solid fa-book-open"></i> {{localize "DHCO.Drylands.Rules"}}</button>
+            <button type="button" data-action="rules" data-page="hunts"><i class="fa-solid fa-book-open"></i> {{localize "DHCO.Drylands.HuntRules"}}</button>
+        {{/if}}
+        {{#if gm}}<button type="button" data-action="reset" class="danger"><i class="fa-solid fa-rotate-left"></i> {{localize "DHCO.Drylands.Reset"}}</button>{{/if}}
+    </footer>
+</div>

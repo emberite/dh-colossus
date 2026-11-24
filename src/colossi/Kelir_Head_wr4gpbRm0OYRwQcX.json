@@ -1,0 +1,363 @@
+{
+  "_id": "wr4gpbRm0OYRwQcX",
+  "name": "Kelir Head",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+  "system": {
+    "difficulty": 18,
+    "damageThresholds": {
+      "major": 30,
+      "severe": 65
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 4
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "dSEj4e5hiNrxhVBN": {
+        "name": "Contempt",
+        "value": 2,
+        "description": ""
+      },
+      "zU6ztA2HEAY60S4Q": {
+        "name": "Huge",
+        "value": 4,
+        "description": ""
+      },
+      "BpDHx4YGAFVYMul7": {
+        "name": "Sense Movement",
+        "value": 4,
+        "description": ""
+      }
+    },
+    "tier": 4,
+    "description": "<p>A crablike, mountainous beast whose children scurry in and around her, bringing food as tribute.</p>",
+    "attack": {
+      "name": "Eye Beams",
+      "range": "close",
+      "roll": {
+        "bonus": 4,
+        "type": "attack",
+        "trait": null,
+        "difficulty": null,
+        "advState": "neutral",
+        "diceRolling": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "compare": null,
+          "treshold": null
+        },
+        "useDefault": false
+      },
+      "damage": {
+        "main": {
+          "value": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "multiplier": "flat",
+            "flatMultiplier": 4,
+            "dice": "d6",
+            "bonus": 6
+          },
+          "applyTo": "hitPoints",
+          "type": [
+            "magical"
+          ],
+          "base": false,
+          "resultBased": false,
+          "valueAlt": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "bonus": null,
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            }
+          },
+          "includeBase": false,
+          "direct": false,
+          "fullRestore": false,
+          "itemId": null
+        },
+        "resources": {}
+      },
+      "_id": "F3RkhAPp86oQuxZn",
+      "systemPath": "attack",
+      "type": "attack",
+      "description": "",
+      "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+      "chatDisplay": false,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+        "value": null,
+        "max": null,
+        "recovery": null,
+        "consumeOnSuccess": false
+      },
+      "target": {
+        "type": "any",
+        "amount": 1
+      },
+      "effects": [],
+      "save": {
+        "trait": null,
+        "difficulty": null,
+        "damageMod": "none"
+      },
+      "baseAction": true,
+      "originItem": {
+        "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+    },
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Head",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "LojaKM5rNssF42qf",
+      "name": "Strike (Very Close)",
+      "type": "feature",
+      "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+      "system": {
+        "description": "<p>The Head is immune to damage from attacks not made within Very Close range.</p>",
+        "featureForm": "passive",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!wr4gpbRm0OYRwQcX.LojaKM5rNssF42qf"
+    },
+    {
+      "_id": "5UoeUbImySUMywa4",
+      "name": "Hateful Gaze",
+      "type": "feature",
+      "img": "icons/magic/perception/eye-slit-pink.webp",
+      "system": {
+        "description": "<p>All targets within Far range that Kelir can see must succeed on a Presence Reaction Roll or mark <strong>1d6</strong> Stress as Kelir’s hate tries to consume their mind.</p>",
+        "featureForm": "action",
+        "actions": {
+          "Z5T8btncbtfJMLSF": {
+            "_id": "Z5T8btncbtfJMLSF",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Hateful Gaze",
+            "img": "icons/magic/perception/eye-slit-pink.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": null
+            },
+            "effects": [],
+            "range": "far",
+            "areas": [
+              {
+                "name": "Hateful Gaze",
+                "type": "placed",
+                "shape": "emanation",
+                "size": "far",
+                "hasHole": false,
+                "effects": []
+              }
+            ],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": null,
+              "resources": {
+                "stress": {
+                  "value": {
+                    "custom": {
+                      "enabled": false,
+                      "formula": ""
+                    },
+                    "multiplier": "flat",
+                    "flatMultiplier": 1,
+                    "dice": "d6",
+                    "bonus": null
+                  },
+                  "applyTo": "stress",
+                  "type": [],
+                  "base": false,
+                  "resultBased": false,
+                  "valueAlt": null,
+                  "includeBase": false,
+                  "direct": false,
+                  "fullRestore": false,
+                  "itemId": null
+                }
+              }
+            },
+            "roll": {
+              "type": null,
+              "trait": null,
+              "difficulty": null,
+              "bonus": null,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": false
+            },
+            "save": {
+              "trait": "presence",
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!wr4gpbRm0OYRwQcX.5UoeUbImySUMywa4"
+    }
+  ],
+  "effects": [],
+  "folder": "9f7lcxR3fWSIZdya",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "head",
+        "adjacent": [
+          "shell"
+        ],
+        "ground": false,
+        "attack": true,
+        "slots": [
+          {
+            "label": "Head",
+            "x": 4,
+            "y": 0,
+            "w": 4,
+            "h": 2
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!wr4gpbRm0OYRwQcX"
+}

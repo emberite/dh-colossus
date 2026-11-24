@@ -1,0 +1,424 @@
+{
+  "_id": "mpL0i8N4GP5LIWwT",
+  "name": "Daktadae, the Cleaver",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-305-colossus-daktade.webp",
+  "system": {
+    "difficulty": 15,
+    "damageThresholds": {
+      "major": 16,
+      "severe": 25
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 0
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "Clear forests, cleave, hew, stomp",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "framework",
+      "parts": [
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.ES4YiRaOK8ViRZ1j",
+          "originalUuid": null,
+          "quantity": 1
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.2GWOAeqPnEXrWcVB",
+          "originalUuid": null,
+          "quantity": 1
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.iSQB8TpkwRe7uwIU",
+          "originalUuid": null,
+          "quantity": 2
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.KJHtV2HPDzCor9QX",
+          "originalUuid": null,
+          "quantity": 2
+        }
+      ],
+      "frameworkUuid": null
+    },
+    "notes": "<p><strong>Size:</strong> 130 ft. tall, 220 ft. long. <strong>Segments:</strong> 1 Head, 1 Torso, 2 Foreleg, 2 Hindleg.</p><p>The framework’s Difficulty is the highest Difficulty among the segments, for effects that target Daktadae as a whole.</p>",
+    "experiences": {
+      "0dgi0AQRvWc0YBtY": {
+        "name": "Huge",
+        "value": 2,
+        "description": ""
+      },
+      "Vm4HF62hmASWUaQn": {
+        "name": "Trampling",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 2,
+    "description": "<p>A massive steel rhinoceros formed from a steam train, a cleaver emerging from his head instead of a horn.</p>",
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "gargantuan",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Daktadae",
+    "displayName": 20,
+    "displayBars": 0,
+    "actorLink": false,
+    "width": 4,
+    "height": 4,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-305-colossus-daktade.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "daIpauIpwrg3R12k",
+      "name": "Steam-Powered",
+      "type": "feature",
+      "img": "icons/magic/air/fog-gas-smoke-swirling-gray.webp",
+      "system": {
+        "description": "<p>Scalding fountains of steam erupt from Daktadae’s form. Spotlight any segment to make an attack with a +1 attack modifier against a target on that segment. On a success, deal <strong>2d6+3</strong> physical damage.</p>",
+        "featureForm": "action",
+        "actions": {
+          "P7SojxzWAfCzBpVt": {
+            "_id": "P7SojxzWAfCzBpVt",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Steam-Powered",
+            "img": "icons/magic/air/fog-gas-smoke-swirling-gray.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": 1
+            },
+            "effects": [],
+            "range": "melee",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 2,
+                  "dice": "d6",
+                  "bonus": 3
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            },
+            "roll": {
+              "type": "attack",
+              "trait": null,
+              "difficulty": null,
+              "bonus": 1,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": false
+            },
+            "save": {
+              "trait": null,
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!mpL0i8N4GP5LIWwT.daIpauIpwrg3R12k"
+    },
+    {
+      "_id": "qDYPgGy1sWLVrCDH",
+      "name": "Roll",
+      "type": "feature",
+      "img": "icons/magic/movement/trail-streak-zigzag-yellow.webp",
+      "system": {
+        "description": "<p><strong>Spend a Fear</strong> to have Daktadae drop to the ground and roll. All PCs on Daktadae or within Close range must succeed on an Instinct Reaction Roll (14) or take <strong>2d20+5</strong> physical damage; succeed or fail, the PCs are thrown off Daktadae onto the ground within Melee range of the colossus.</p>",
+        "featureForm": "action",
+        "actions": {
+          "Vuv736SiySl7Cs3V": {
+            "_id": "Vuv736SiySl7Cs3V",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Roll",
+            "img": "icons/magic/movement/trail-streak-zigzag-yellow.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [
+              {
+                "scalable": false,
+                "key": "fear",
+                "value": 1,
+                "step": null,
+                "itemId": null,
+                "consumeOnSuccess": false
+              }
+            ],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": null
+            },
+            "effects": [],
+            "range": "close",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 2,
+                  "dice": "d20",
+                  "bonus": 5
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            },
+            "roll": {
+              "type": null,
+              "trait": null,
+              "difficulty": null,
+              "bonus": null,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": false
+            },
+            "save": {
+              "trait": "instinct",
+              "difficulty": 14,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {
+        "dh-colossus": {
+          "throwOff": true
+        }
+      },
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!mpL0i8N4GP5LIWwT.qDYPgGy1sWLVrCDH"
+    },
+    {
+      "_id": "5f0QZWolnE9d5v9u",
+      "name": "Slow Recovery",
+      "type": "feature",
+      "img": "icons/magic/life/heart-cross-strong-flame-green.webp",
+      "system": {
+        "description": "<p>Clear a token from one <em>Broken</em> or <em>Collapsed</em> segment.</p>",
+        "featureForm": "action",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!mpL0i8N4GP5LIWwT.5f0QZWolnE9d5v9u"
+    },
+    {
+      "_id": "cz4fwYsv0D1MHPDI",
+      "name": "Colossal Power",
+      "type": "feature",
+      "img": "icons/magic/control/fear-fright-monster-grin-red-orange.webp",
+      "system": {
+        "description": "<p>When Daktadae fails an attack, you gain a Fear.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 4000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!mpL0i8N4GP5LIWwT.cz4fwYsv0D1MHPDI"
+    }
+  ],
+  "effects": [],
+  "folder": "JmNjR4tc65ycEiWs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "colossus": {
+        "key": "daktadae",
+        "size": "130 ft. tall, 220 ft. long"
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!mpL0i8N4GP5LIWwT"
+}

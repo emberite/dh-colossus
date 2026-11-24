@@ -1,0 +1,414 @@
+{
+  "_id": "Z19aJFn2DGVqVw1M",
+  "name": "Poy Head",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-307-colossus-poy.webp",
+  "system": {
+    "difficulty": 16,
+    "damageThresholds": {
+      "major": 25,
+      "severe": 48
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 5
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "part",
+      "parts": [],
+      "frameworkUuid": null
+    },
+    "notes": "",
+    "experiences": {
+      "gb3lwIU3iWABzdDy": {
+        "name": "Attack From Above",
+        "value": 3,
+        "description": ""
+      },
+      "J8PFsluxOK26sE4R": {
+        "name": "Huge",
+        "value": 3,
+        "description": ""
+      },
+      "0A2jycX43x4nXgFc": {
+        "name": "Maneuver",
+        "value": 2,
+        "description": ""
+      }
+    },
+    "tier": 3,
+    "description": "<p>This massive shoebill stork is formed from the dust of the Drylands and traps enemies in their cavernous beak.</p>",
+    "attack": {
+      "name": "Screech",
+      "range": "veryFar",
+      "roll": {
+        "bonus": 3,
+        "type": "attack",
+        "trait": null,
+        "difficulty": null,
+        "advState": "neutral",
+        "diceRolling": {
+          "multiplier": "prof",
+          "flatMultiplier": 1,
+          "dice": "d6",
+          "compare": null,
+          "treshold": null
+        },
+        "useDefault": false
+      },
+      "damage": {
+        "main": {
+          "value": {
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "multiplier": "flat",
+            "flatMultiplier": 3,
+            "dice": "d8",
+            "bonus": 2
+          },
+          "applyTo": "hitPoints",
+          "type": [
+            "magical"
+          ],
+          "base": false,
+          "resultBased": false,
+          "valueAlt": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "bonus": null,
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            }
+          },
+          "includeBase": false,
+          "direct": false,
+          "fullRestore": false,
+          "itemId": null
+        },
+        "resources": {}
+      },
+      "_id": "g5zQ3vhgouZPgkuY",
+      "systemPath": "attack",
+      "type": "attack",
+      "description": "",
+      "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+      "chatDisplay": false,
+      "actionType": "action",
+      "cost": [],
+      "uses": {
+        "value": null,
+        "max": null,
+        "recovery": null,
+        "consumeOnSuccess": false
+      },
+      "target": {
+        "type": "any",
+        "amount": 1
+      },
+      "effects": [],
+      "save": {
+        "trait": null,
+        "difficulty": null,
+        "damageMod": "none"
+      },
+      "baseAction": true,
+      "originItem": {
+        "type": "itemCollection"
+      },
+      "triggers": [],
+      "areas": []
+    },
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "large",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Head",
+    "displayName": 20,
+    "displayBars": 20,
+    "actorLink": false,
+    "width": 2,
+    "height": 2,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-307-colossus-poy.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "WPNWWhXdpaSzowNM",
+      "name": "Bill Trap",
+      "type": "feature",
+      "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+      "system": {
+        "description": "<p><strong>Spend a Fear</strong> to make an attack against a target on Poy. On a success, the target takes <strong>3d6+6</strong> physical damage and is <em>Trapped</em> inside Poy’s bill until the Head takes Major or greater damage. Poy’s damage thresholds are doubled against damage dealt by Trapped targets.</p>",
+        "featureForm": "action",
+        "actions": {
+          "DdpNOEljfqYYdNMr": {
+            "_id": "DdpNOEljfqYYdNMr",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Bill Trap",
+            "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [
+              {
+                "scalable": false,
+                "key": "fear",
+                "value": 1,
+                "step": null,
+                "itemId": null,
+                "consumeOnSuccess": false
+              }
+            ],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": 1
+            },
+            "effects": [
+              {
+                "_id": "hWo9fdENsG4egCOK",
+                "onSave": false
+              }
+            ],
+            "range": "far",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 3,
+                  "dice": "d6",
+                  "bonus": 6
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            },
+            "roll": {
+              "type": "attack",
+              "trait": null,
+              "difficulty": null,
+              "bonus": null,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": true
+            },
+            "save": {
+              "trait": null,
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [
+        {
+          "_id": "hWo9fdENsG4egCOK",
+          "name": "Trapped",
+          "img": "icons/creatures/abilities/mouth-teeth-long-red.webp",
+          "type": "base",
+          "transfer": false,
+          "disabled": false,
+          "statuses": [
+            "dhcoTrapped"
+          ],
+          "description": "",
+          "tint": "#ffffff",
+          "showIcon": 1,
+          "sort": 0,
+          "flags": {},
+          "system": {
+            "changes": [],
+            "duration": {
+              "description": ""
+            },
+            "rangeDependence": null,
+            "stacking": null,
+            "targetDispositions": [],
+            "conditionals": []
+          },
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "folder": null,
+          "_stats": {
+            "coreVersion": "14.370",
+            "systemId": "daggerheart",
+            "systemVersion": "2.13.2",
+            "createdTime": null,
+            "modifiedTime": null,
+            "lastModifiedBy": null,
+            "compendiumSource": null,
+            "duplicateSource": null
+          },
+          "_key": "!actors.items.effects!Z19aJFn2DGVqVw1M.WPNWWhXdpaSzowNM.hWo9fdENsG4egCOK"
+        }
+      ],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!Z19aJFn2DGVqVw1M.WPNWWhXdpaSzowNM"
+    },
+    {
+      "_id": "jaE3z8dXhT1SNsCV",
+      "name": "Cascade",
+      "type": "feature",
+      "img": "icons/magic/earth/strike-fist-stone-gray.webp",
+      "system": {
+        "description": "<p>When this segment is <em>Destroyed</em>, the Neck must mark 3 HP.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!Z19aJFn2DGVqVw1M.jaE3z8dXhT1SNsCV"
+    }
+  ],
+  "effects": [],
+  "folder": "1esMEK5Eeazd3Ii7",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "segment": {
+        "key": "head",
+        "adjacent": [
+          "neck"
+        ],
+        "ground": false,
+        "attack": true,
+        "slots": [
+          {
+            "label": "Head",
+            "x": 0,
+            "y": 4,
+            "w": 2,
+            "h": 2
+          }
+        ]
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!Z19aJFn2DGVqVw1M"
+}

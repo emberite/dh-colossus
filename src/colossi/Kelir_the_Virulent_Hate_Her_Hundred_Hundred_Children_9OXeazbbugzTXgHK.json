@@ -1,0 +1,314 @@
+{
+  "_id": "9OXeazbbugzTXgHK",
+  "name": "Kelir, the Virulent Hate & Her Hundred, Hundred Children",
+  "type": "adversary",
+  "img": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+  "system": {
+    "difficulty": 18,
+    "damageThresholds": {
+      "major": 30,
+      "severe": 65
+    },
+    "resources": {
+      "hitPoints": {
+        "value": 0,
+        "max": 0
+      },
+      "stress": {
+        "value": 0,
+        "max": 6
+      }
+    },
+    "motivesAndTactics": "Consume, ravage, swarm",
+    "resistance": {
+      "physical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      },
+      "magical": {
+        "resistance": false,
+        "immunity": false,
+        "reduction": 0
+      }
+    },
+    "type": "colossus",
+    "typeData": {
+      "type": "colossus",
+      "role": "framework",
+      "parts": [
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.wr4gpbRm0OYRwQcX",
+          "originalUuid": null,
+          "quantity": 1
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.ItRLbZ1zFWHOcMr2",
+          "originalUuid": null,
+          "quantity": 1
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.BhkJdZUaUbL5e3Km",
+          "originalUuid": null,
+          "quantity": 1
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.Y3jNvhSDx7UhFcqi",
+          "originalUuid": null,
+          "quantity": 2
+        },
+        {
+          "uuid": "Compendium.dh-colossus.colossi.Actor.JVD3Fv9uqAkA2Kap",
+          "originalUuid": null,
+          "quantity": 4
+        }
+      ],
+      "frameworkUuid": null
+    },
+    "notes": "<p><strong>Size:</strong> 275 ft. tall, 150 ft. wide. <strong>Segments:</strong> 1 Head, 1 Shell, 1 Body Cavity, 2 Claw, 4 Leg.</p><p>The framework’s Difficulty is the highest Difficulty among the segments, for effects that target Kelir as a whole.</p>",
+    "experiences": {
+      "dSEj4e5hiNrxhVBN": {
+        "name": "Contempt",
+        "value": 2,
+        "description": ""
+      },
+      "zU6ztA2HEAY60S4Q": {
+        "name": "Huge",
+        "value": 4,
+        "description": ""
+      },
+      "BpDHx4YGAFVYMul7": {
+        "name": "Sense Movement",
+        "value": 4,
+        "description": ""
+      }
+    },
+    "tier": 4,
+    "description": "<p>A crablike, mountainous beast whose children scurry in and around her, bringing food as tribute.</p>",
+    "attribution": {
+      "source": "Daggerheart Core Rulebook",
+      "page": null,
+      "artist": ""
+    },
+    "size": "gargantuan",
+    "advantageSources": [],
+    "disadvantageSources": [],
+    "criticalThreshold": 20
+  },
+  "prototypeToken": {
+    "name": "Kelir",
+    "displayName": 20,
+    "displayBars": 0,
+    "actorLink": false,
+    "width": 4,
+    "height": 4,
+    "disposition": -1,
+    "texture": {
+      "src": "modules/daggerheart-core/assets/art/frame-308-colossus-kelir.webp",
+      "fit": "contain",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "ring": {
+      "enabled": false
+    }
+  },
+  "items": [
+    {
+      "_id": "4FtN8Ee3r8m6jIUJ",
+      "name": "Brood Attack",
+      "type": "feature",
+      "img": "icons/creatures/invertebrates/spider-mandibles-brown.webp",
+      "system": {
+        "description": "<p>Spotlight any segment to make an attack with a +6 attack modifier against a PC on that segment as Kelir’s hundred, hundred children swarm the target with their pincers. On a success, deal <strong>4d8</strong> physical damage.</p>",
+        "featureForm": "action",
+        "actions": {
+          "VaQoTIGF5deqUoLv": {
+            "_id": "VaQoTIGF5deqUoLv",
+            "type": "attack",
+            "systemPath": "actions",
+            "name": "Brood Attack",
+            "img": "icons/creatures/invertebrates/spider-mandibles-brown.webp",
+            "description": "",
+            "chatDisplay": true,
+            "actionType": "action",
+            "cost": [],
+            "uses": {
+              "value": null,
+              "max": "",
+              "recovery": null,
+              "consumeOnSuccess": false
+            },
+            "target": {
+              "type": "any",
+              "amount": 1
+            },
+            "effects": [],
+            "range": "melee",
+            "areas": [],
+            "baseAction": false,
+            "originItem": {
+              "type": "itemCollection"
+            },
+            "triggers": [],
+            "damage": {
+              "main": {
+                "value": {
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  },
+                  "multiplier": "flat",
+                  "flatMultiplier": 4,
+                  "dice": "d8",
+                  "bonus": null
+                },
+                "applyTo": "hitPoints",
+                "type": [
+                  "physical"
+                ],
+                "base": false,
+                "resultBased": false,
+                "valueAlt": null,
+                "includeBase": false,
+                "direct": false,
+                "fullRestore": false,
+                "itemId": null
+              },
+              "resources": {}
+            },
+            "roll": {
+              "type": "attack",
+              "trait": null,
+              "difficulty": null,
+              "bonus": 6,
+              "advState": "neutral",
+              "diceRolling": {
+                "multiplier": "prof",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "compare": null,
+                "treshold": null
+              },
+              "useDefault": false
+            },
+            "save": {
+              "trait": null,
+              "difficulty": null,
+              "damageMod": "none"
+            }
+          }
+        },
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!9OXeazbbugzTXgHK.4FtN8Ee3r8m6jIUJ"
+    },
+    {
+      "_id": "QQXMmr50hNqQUySG",
+      "name": "Swatting Pests",
+      "type": "feature",
+      "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+      "system": {
+        "description": "<p>When Kelir is attacked by a flying target within Far range, you can make a Pincer (Claws) standard attack against the attacker. On a success, add a d20 to the damage roll and the target is knocked to the ground within Far range.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 2000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!9OXeazbbugzTXgHK.QQXMmr50hNqQUySG"
+    },
+    {
+      "_id": "lFpDNGE2boFIA2yc",
+      "name": "Colossal Power",
+      "type": "feature",
+      "img": "icons/magic/control/fear-fright-monster-grin-red-orange.webp",
+      "system": {
+        "description": "<p>When Kelir fails an attack, you gain a Fear.</p>",
+        "featureForm": "reaction",
+        "actions": {},
+        "resource": null,
+        "attribution": {},
+        "gmNotes": "",
+        "granter": null,
+        "actorResources": []
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 3000,
+      "flags": {},
+      "_stats": {
+        "coreVersion": "14.370",
+        "systemId": "daggerheart",
+        "systemVersion": "2.13.2",
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null,
+        "compendiumSource": null,
+        "duplicateSource": null
+      },
+      "_key": "!actors.items!9OXeazbbugzTXgHK.lFpDNGE2boFIA2yc"
+    }
+  ],
+  "effects": [],
+  "folder": "9f7lcxR3fWSIZdya",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dh-colossus": {
+      "colossus": {
+        "key": "kelir",
+        "size": "275 ft. tall, 150 ft. wide"
+      }
+    }
+  },
+  "_stats": {
+    "coreVersion": "14.370",
+    "systemId": "daggerheart",
+    "systemVersion": "2.13.2",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_key": "!actors!9OXeazbbugzTXgHK"
+}
